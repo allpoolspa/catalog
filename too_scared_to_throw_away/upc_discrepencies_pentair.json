@@ -1,0 +1,2750 @@
+{
+    "": {
+        "part_number": "360229", 
+        "title": "CVR TOP FRNT RPLC ", 
+        "upc_man": "788379862541", 
+        "upc_scp": ""
+    }, 
+    "022315127319": {
+        "part_number": "09655-2404", 
+        "title": "U-3 V-LINER TAN 2\"SLP W/1.5\"SLP RDCR", 
+        "upc_man": "", 
+        "upc_scp": "022315127319"
+    }, 
+    "022315156173": {
+        "part_number": "C600-104", 
+        "title": "REPAIR KIT PKG FOR SVC ", 
+        "upc_man": "", 
+        "upc_scp": "022315156173"
+    }, 
+    "022315201828": {
+        "part_number": "WC108-70S2X", 
+        "title": "POSI-FLO FLT ELEM 135SQFT", 
+        "upc_man": "022315123991", 
+        "upc_scp": "022315201828"
+    }, 
+    "022315203891": {
+        "part_number": "GW9016", 
+        "title": "VAC ADJST ASY GW9000 ", 
+        "upc_man": "023315203891", 
+        "upc_scp": "022315203891"
+    }, 
+    "022315208308": {
+        "part_number": "SR333NA", 
+        "title": "POOL HTR 333K NAT GAS ", 
+        "upc_man": "", 
+        "upc_scp": "022315208308"
+    }, 
+    "022315219182": {
+        "part_number": "18201-0200", 
+        "title": "VLV MLTPRT 6POS 2\" PRAHER# SM2-S", 
+        "upc_man": "", 
+        "upc_scp": "022315219182"
+    }, 
+    "022315303492": {
+        "part_number": "77707-0242", 
+        "title": "TUBESHEET/COIL KIT COPPER-NICKEL 200K", 
+        "upc_man": "", 
+        "upc_scp": "022315303492"
+    }, 
+    "022315304819": {
+        "part_number": "25022-0203S", 
+        "title": "FLT MOD SVC 259SQFT ", 
+        "upc_man": "", 
+        "upc_scp": "022315304819"
+    }, 
+    "022315309418": {
+        "part_number": "PP1682", 
+        "title": "OVRHL KIT-PCD-910 W/PS5-11P", 
+        "upc_man": "", 
+        "upc_scp": "022315309418"
+    }, 
+    "022315333383": {
+        "part_number": "N20-35", 
+        "title": "GASKET ", 
+        "upc_man": "788379745233", 
+        "upc_scp": "022315333383"
+    }, 
+    "022315368583": {
+        "part_number": "16401-0010", 
+        "title": "STRNR BDY COMM POOL PUMP ", 
+        "upc_man": "788379764432", 
+        "upc_scp": "022315368583"
+    }, 
+    "022315368590": {
+        "part_number": "16401-0030", 
+        "title": "BSKT STRNR 8IN SS ", 
+        "upc_man": "788379781828", 
+        "upc_scp": "022315368590"
+    }, 
+    "022315368606": {
+        "part_number": "16401-0102", 
+        "title": "STRNR BSKT COMM POLISHED ", 
+        "upc_man": "788379782832", 
+        "upc_scp": "022315368606"
+    }, 
+    "022315368613": {
+        "part_number": "16401-0210", 
+        "title": "STRNR CVR COMM PUMP ", 
+        "upc_man": "", 
+        "upc_scp": "022315368613"
+    }, 
+    "022315368644": {
+        "part_number": "16830-0100", 
+        "title": "VLT CSP POOL PMP ", 
+        "upc_man": "788379768584", 
+        "upc_scp": "022315368644"
+    }, 
+    "022315368668": {
+        "part_number": "16830-0120", 
+        "title": "WEAR RNG CSP PMP VLT ", 
+        "upc_man": "788379817350", 
+        "upc_scp": "022315368668"
+    }, 
+    "022315368675": {
+        "part_number": "16830-0209", 
+        "title": "IMP CSP PMP 7.5HP 60HZ/ 5HP 50HZ", 
+        "upc_man": "788379786199", 
+        "upc_scp": "022315368675"
+    }, 
+    "022315368682": {
+        "part_number": "16830-0210", 
+        "title": "IMP CSP PMP 10HP 60HZ/ 7.5HP 50HZ", 
+        "upc_man": "788379817367", 
+        "upc_scp": "022315368682"
+    }, 
+    "022315368699": {
+        "part_number": "16830-0211", 
+        "title": "IMP CSP PMP 15HP 60HZ/ 10HP 50HZ", 
+        "upc_man": "788379784522", 
+        "upc_scp": "022315368699"
+    }, 
+    "022315368705": {
+        "part_number": "16830-0212", 
+        "title": "IMP CSP PMP 20HP 60HZ/ 15HP 50HZ", 
+        "upc_man": "788379782405", 
+        "upc_scp": "022315368705"
+    }, 
+    "022315368729": {
+        "part_number": "16830-0320", 
+        "title": "MTR 7.5HP 3600/60/3 TE 200V 184JM", 
+        "upc_man": "788379774752", 
+        "upc_scp": "022315368729"
+    }, 
+    "022315368774": {
+        "part_number": "16830-2102", 
+        "title": "VLT CCSP PMP EPOXY COAT ", 
+        "upc_man": "", 
+        "upc_scp": "022315368774"
+    }, 
+    "022315368811": {
+        "part_number": "16830-2203", 
+        "title": "MTR BRKT EPOXY COAT CCSP PMP", 
+        "upc_man": "788379774455", 
+        "upc_scp": "022315368811"
+    }, 
+    "022315368828": {
+        "part_number": "16831-0320", 
+        "title": "MTR 10HP 3600/60/3 TE 200V 215JM", 
+        "upc_man": "788379777173", 
+        "upc_scp": "022315368828"
+    }, 
+    "022315368842": {
+        "part_number": "16832-0320", 
+        "title": "MTR 15HP 3600/60/3 TE 200V 215JM", 
+        "upc_man": "788379769499", 
+        "upc_scp": "022315368842"
+    }, 
+    "022315368866": {
+        "part_number": "16833-0320", 
+        "title": "MTR 20HP 3600/60/3 TE 200V 256JM", 
+        "upc_man": "788379771485", 
+        "upc_scp": "022315368866"
+    }, 
+    "022315368910": {
+        "part_number": "30747-0152", 
+        "title": "STUD 1/2-13X11/2 LG 303SS", 
+        "upc_man": "788379775995", 
+        "upc_scp": "022315368910"
+    }, 
+    "022315368927": {
+        "part_number": "30767-0011", 
+        "title": "TGL BOLT COMM STRNR ", 
+        "upc_man": "788379771980", 
+        "upc_scp": "022315368927"
+    }, 
+    "022315368934": {
+        "part_number": "33450-8041", 
+        "title": "GSKT 6\" PIPE FLANGE ", 
+        "upc_man": "788379782696", 
+        "upc_scp": "022315368934"
+    }, 
+    "022315368941": {
+        "part_number": "33450-8042", 
+        "title": "GASKET VOLUTE DISCHARGE ", 
+        "upc_man": "788379829889", 
+        "upc_scp": "022315368941"
+    }, 
+    "022315368958": {
+        "part_number": "33455-8044", 
+        "title": "GSKT IMP TO SHAFTSLEEVE CSP", 
+        "upc_man": "788379829902", 
+        "upc_scp": "022315368958"
+    }, 
+    "022315368965": {
+        "part_number": "33455-8045", 
+        "title": "GSKT IMP TO LKWSHR ", 
+        "upc_man": "", 
+        "upc_scp": "022315368965"
+    }, 
+    "022315368972": {
+        "part_number": "33455-8046", 
+        "title": "GSKT IMP TO SHAFT SLEEVE ", 
+        "upc_man": "", 
+        "upc_scp": "022315368972"
+    }, 
+    "022315368989": {
+        "part_number": "35404-0319", 
+        "title": "WING NUT COMM STRNR ", 
+        "upc_man": "788379771959", 
+        "upc_scp": "022315368989"
+    }, 
+    "022315368996": {
+        "part_number": "35505-0421", 
+        "title": "CRD RNG STRNR LID ", 
+        "upc_man": "788379830304", 
+        "upc_scp": "022315368996"
+    }, 
+    "022315369009": {
+        "part_number": "35857-0031", 
+        "title": "SPRING PIN ", 
+        "upc_man": "788379771973", 
+        "upc_scp": "022315369009"
+    }, 
+    "022315369030": {
+        "part_number": "38917-0203", 
+        "title": "WSHR IMP FOR CSP PUMP ", 
+        "upc_man": "788379830700", 
+        "upc_scp": "022315369030"
+    }, 
+    "022315369047": {
+        "part_number": "38917-0204", 
+        "title": "WSHR IMP FOR CSP PUMP ", 
+        "upc_man": "788379781521", 
+        "upc_scp": "022315369047"
+    }, 
+    "022315371569": {
+        "part_number": "C1-185DB", 
+        "title": "INTEGRAL VLT TRAP BO ", 
+        "upc_man": "788379732844", 
+        "upc_scp": "022315371569"
+    }, 
+    "022315371613": {
+        "part_number": "C1-51", 
+        "title": "VLT DIFF ", 
+        "upc_man": "788379733070", 
+        "upc_scp": "022315371613"
+    }, 
+    "022315371620": {
+        "part_number": "C101-126", 
+        "title": "DIFF ASY ", 
+        "upc_man": "788379733131", 
+        "upc_scp": "022315371620"
+    }, 
+    "022315371637": {
+        "part_number": "C101-126B", 
+        "title": "DIFF ASY ", 
+        "upc_man": "788379733148", 
+        "upc_scp": "022315371637"
+    }, 
+    "022315371767": {
+        "part_number": "C104-41P", 
+        "title": "PLSTC BASE ASY (KIT) ", 
+        "upc_man": "788379733384", 
+        "upc_scp": "022315371767"
+    }, 
+    "022315371781": {
+        "part_number": "C105-114PC", 
+        "title": "IMP ", 
+        "upc_man": "", 
+        "upc_scp": "022315371781"
+    }, 
+    "022315371804": {
+        "part_number": "C105-114PJ", 
+        "title": "IMP ", 
+        "upc_man": "", 
+        "upc_scp": "022315371804"
+    }, 
+    "022315371859": {
+        "part_number": "C105-214PA", 
+        "title": "IMP ", 
+        "upc_man": "788379733919", 
+        "upc_scp": "022315371859"
+    }, 
+    "022315371910": {
+        "part_number": "C105-224DE", 
+        "title": "IMP ASY SILICON ", 
+        "upc_man": "788379733964", 
+        "upc_scp": "022315371910"
+    }, 
+    "022315371927": {
+        "part_number": "C105-224DF", 
+        "title": "IMP ASY SILICON ", 
+        "upc_man": "788379733971", 
+        "upc_scp": "022315371927"
+    }, 
+    "022315371934": {
+        "part_number": "C105-224DG", 
+        "title": "IMP ASY SILICON ", 
+        "upc_man": "788379733988", 
+        "upc_scp": "022315371934"
+    }, 
+    "022315371958": {
+        "part_number": "C105-92PB", 
+        "title": "IMPELLER ", 
+        "upc_man": "788379734534", 
+        "upc_scp": "022315371958"
+    }, 
+    "022315371972": {
+        "part_number": "C105-92PCB", 
+        "title": "IMPELLER ", 
+        "upc_man": "788379734565", 
+        "upc_scp": "022315371972"
+    }, 
+    "022315372153": {
+        "part_number": "C19-54SS", 
+        "title": "V CLMP ASY ", 
+        "upc_man": "788379734985", 
+        "upc_scp": "022315372153"
+    }, 
+    "022315372184": {
+        "part_number": "C2-66", 
+        "title": "MTR ADPT D SERIES FOR CENTURY MTR", 
+        "upc_man": "788379735074", 
+        "upc_scp": "022315372184"
+    }, 
+    "022315372191": {
+        "part_number": "C2-81", 
+        "title": "ADPTR ", 
+        "upc_man": "", 
+        "upc_scp": "022315372191"
+    }, 
+    "022315372207": {
+        "part_number": "C2-81D", 
+        "title": "ADPTR ", 
+        "upc_man": "788379735098", 
+        "upc_scp": "022315372207"
+    }, 
+    "022315372214": {
+        "part_number": "C20-100", 
+        "title": "GSKT IMP 27/32IDX1-1/80D X3/64", 
+        "upc_man": "788379735111", 
+        "upc_scp": "022315372214"
+    }, 
+    "022315372221": {
+        "part_number": "C20-101", 
+        "title": "GSKT SLV 29/32IDX 1-7/32OD X 1/32", 
+        "upc_man": "788379735128", 
+        "upc_scp": "022315372221"
+    }, 
+    "022315372238": {
+        "part_number": "C20-121", 
+        "title": "GSKT ", 
+        "upc_man": "788379735135", 
+        "upc_scp": "022315372238"
+    }, 
+    "022315372252": {
+        "part_number": "C20-15", 
+        "title": "GSKT ", 
+        "upc_man": "788379735173", 
+        "upc_scp": "022315372252"
+    }, 
+    "022315372269": {
+        "part_number": "C20-19", 
+        "title": "GSKT SUCTION ", 
+        "upc_man": "788379735180", 
+        "upc_scp": "022315372269"
+    }, 
+    "022315372283": {
+        "part_number": "C20-46", 
+        "title": "GSKT 9.5OD 7.94ID EIGHT0.41DIA HOLES 1", 
+        "upc_man": "", 
+        "upc_scp": "022315372283"
+    }, 
+    "022315372351": {
+        "part_number": "C21-2", 
+        "title": "RNG DIFF ", 
+        "upc_man": "788379735333", 
+        "upc_scp": "022315372351"
+    }, 
+    "022315372368": {
+        "part_number": "C218-177", 
+        "title": "MTR 0030 0000230 60 12 182JM ODP", 
+        "upc_man": "788379735340", 
+        "upc_scp": "022315372368"
+    }, 
+    "022315372399": {
+        "part_number": "C218-180", 
+        "title": "MTR 0050 0000230 60 12 184JM ODP", 
+        "upc_man": "788379735371", 
+        "upc_scp": "022315372399"
+    }, 
+    "022315372467": {
+        "part_number": "C23-14", 
+        "title": "WEAR RNG ", 
+        "upc_man": "", 
+        "upc_scp": "022315372467"
+    }, 
+    "022315372474": {
+        "part_number": "C23-19", 
+        "title": "WEAR RNG ", 
+        "upc_man": "788379735500", 
+        "upc_scp": "022315372474"
+    }, 
+    "022315372504": {
+        "part_number": "C23-40", 
+        "title": "WEAR RNG 5HP POOL PMP ", 
+        "upc_man": "788379735548", 
+        "upc_scp": "022315372504"
+    }, 
+    "022315372528": {
+        "part_number": "C23-58", 
+        "title": "SHAFT SLV D SER ", 
+        "upc_man": "788379735586", 
+        "upc_scp": "022315372528"
+    }, 
+    "022315372535": {
+        "part_number": "C3-105D", 
+        "title": "CVR SUCT TRAP ", 
+        "upc_man": "788379735661", 
+        "upc_scp": "022315372535"
+    }, 
+    "022315372610": {
+        "part_number": "C3-23", 
+        "title": "SLPL ", 
+        "upc_man": "", 
+        "upc_scp": "022315372610"
+    }, 
+    "022315372627": {
+        "part_number": "C3-30", 
+        "title": "CVR SUCTION TRAP 6\" C ", 
+        "upc_man": "788379735845", 
+        "upc_scp": "022315372627"
+    }, 
+    "022315372658": {
+        "part_number": "C3-78D", 
+        "title": "CVR SUCT TRAP MACH ", 
+        "upc_man": "788379735883", 
+        "upc_scp": "022315372658"
+    }, 
+    "022315372689": {
+        "part_number": "C43-45SS", 
+        "title": "IMP WSHR 13/32ID X1-1/8OD X 1/8", 
+        "upc_man": "788379736095", 
+        "upc_scp": "022315372689"
+    }, 
+    "022315372696": {
+        "part_number": "C43-46", 
+        "title": "STAT-O-SEAL WSHR 600-0101 3/8 PARKER", 
+        "upc_man": "788379736101", 
+        "upc_scp": "022315372696"
+    }, 
+    "022315372702": {
+        "part_number": "C43-46SS", 
+        "title": "1.365.00 WSHR STAT-O- SEAL 3/8\"", 
+        "upc_man": "788379736118", 
+        "upc_scp": "022315372702"
+    }, 
+    "022315372719": {
+        "part_number": "C43-46SSA", 
+        "title": "WSHR STAT-O-SEAL 1/2\" ", 
+        "upc_man": "788379736125", 
+        "upc_scp": "022315372719"
+    }, 
+    "022315372726": {
+        "part_number": "C5-181D", 
+        "title": "IMP H&F PMP 2.2HP ", 
+        "upc_man": "788379736187", 
+        "upc_scp": "022315372726"
+    }, 
+    "022315372733": {
+        "part_number": "C5-182D", 
+        "title": "IMP ", 
+        "upc_man": "788379736194", 
+        "upc_scp": "022315372733"
+    }, 
+    "022315372757": {
+        "part_number": "C5-203D", 
+        "title": "IMP ", 
+        "upc_man": "788379736224", 
+        "upc_scp": "022315372757"
+    }, 
+    "022315372764": {
+        "part_number": "C5-247", 
+        "title": "IMP MACH 5HP MED HD ", 
+        "upc_man": "788379736286", 
+        "upc_scp": "022315372764"
+    }, 
+    "022315372771": {
+        "part_number": "C5-248", 
+        "title": "IMP MACH 3HP HI HD ", 
+        "upc_man": "788379736293", 
+        "upc_scp": "022315372771"
+    }, 
+    "022315372788": {
+        "part_number": "C5-249", 
+        "title": "IMP MACH 5HP HI HD ", 
+        "upc_man": "788379736309", 
+        "upc_scp": "022315372788"
+    }, 
+    "022315372849": {
+        "part_number": "C53-21D", 
+        "title": "BDY SUCTION TRAP ", 
+        "upc_man": "788379736354", 
+        "upc_scp": "022315372849"
+    }, 
+    "022315372863": {
+        "part_number": "C53-5B", 
+        "title": "BDY SUCTION TRAP ", 
+        "upc_man": "788379736378", 
+        "upc_scp": "022315372863"
+    }, 
+    "022315372931": {
+        "part_number": "C69-15", 
+        "title": "SLNGR 2-1/4\"Dx1-7/32\"D x1/8\"W", 
+        "upc_man": "788379736538", 
+        "upc_scp": "022315372931"
+    }, 
+    "022315372979": {
+        "part_number": "C76-12C", 
+        "title": "PMP BDY 2-1/2\" NPT ", 
+        "upc_man": "788379736606", 
+        "upc_scp": "022315372979"
+    }, 
+    "022315373037": {
+        "part_number": "CCSPH2K3-142", 
+        "title": "PMP COM POOL 7.5HP 200V 3PH EPXY COAT", 
+        "upc_man": "788379732516", 
+        "upc_scp": "022315373037"
+    }, 
+    "022315373075": {
+        "part_number": "CCSPHK-142", 
+        "title": "PMP COM POOL 7.5HP 230V 1PH EPXY COATED", 
+        "upc_man": "788379732356", 
+        "upc_scp": "022315373075"
+    }, 
+    "022315373082": {
+        "part_number": "CCSPHK3-142", 
+        "title": "PMP COM POOL 7.5HP 230/460 3PH EPXY COA", 
+        "upc_man": "788379732363", 
+        "upc_scp": "022315373082"
+    }, 
+    "022315373150": {
+        "part_number": "CCSPHM3-144", 
+        "title": "PMP COM POOL 15HP 230/460 3PH EPXY COAT", 
+        "upc_man": "788379732431", 
+        "upc_scp": "022315373150"
+    }, 
+    "022315373181": {
+        "part_number": "CCSPHN3-145", 
+        "title": "PMP COM POOL 20HP 230/460 3PH EPXY COAT", 
+        "upc_man": "788379732462", 
+        "upc_scp": "022315373181"
+    }, 
+    "022315373266": {
+        "part_number": "CSPH2N3-145", 
+        "title": "PMP COM POOL 20HP 200V 3PH", 
+        "upc_man": "788379732837", 
+        "upc_scp": "022315373266"
+    }, 
+    "022315373273": {
+        "part_number": "CSPHK-142", 
+        "title": "PMP COM POOL 7.5HP 230V 1PH", 
+        "upc_man": "788379732608", 
+        "upc_scp": "022315373273"
+    }, 
+    "022315373280": {
+        "part_number": "CSPHK3-142", 
+        "title": "PMP COM POOL 7.5HP 230/460 3PH", 
+        "upc_man": "788379732615", 
+        "upc_scp": "022315373280"
+    }, 
+    "022315373327": {
+        "part_number": "CSPHL-143", 
+        "title": "PMP COM POOL 10HP 230V 1PH", 
+        "upc_man": "788379732653", 
+        "upc_scp": "022315373327"
+    }, 
+    "022315373334": {
+        "part_number": "CSPHL3-143", 
+        "title": "PMP COM POOL 10HP 230/ 460 3PH", 
+        "upc_man": "788379732660", 
+        "upc_scp": "022315373334"
+    }, 
+    "022315373372": {
+        "part_number": "CSPHM3-144", 
+        "title": "PMP COM POOL 15HP 230/ 460V 3PH", 
+        "upc_man": "788379732707", 
+        "upc_scp": "022315373372"
+    }, 
+    "022315373402": {
+        "part_number": "CSPHN3-145", 
+        "title": "PMP COM POOL 20HP 230/ 460 3PH", 
+        "upc_man": "788379732738", 
+        "upc_scp": "022315373402"
+    }, 
+    "022315373747": {
+        "part_number": "J1-40P", 
+        "title": "DIFF PLSTC JET PMP ", 
+        "upc_man": "", 
+        "upc_scp": "022315373747"
+    }, 
+    "022315373884": {
+        "part_number": "J105-8PACN", 
+        "title": "IMPELLER ", 
+        "upc_man": "788379738686", 
+        "upc_scp": "022315373884"
+    }, 
+    "022315373938": {
+        "part_number": "J23-5", 
+        "title": "WEAR RING ", 
+        "upc_man": "788379739065", 
+        "upc_scp": "022315373938"
+    }, 
+    "022315374096": {
+        "part_number": "L05779", 
+        "title": "BRACKET B_TP__ 1-1/4U 8-1/2AK CI 2-1/8 B", 
+        "upc_man": "788379739614", 
+        "upc_scp": "022315374096"
+    }, 
+    "022315374409": {
+        "part_number": "L176-47P", 
+        "title": "SEALPLATE MACH 1.75IN BOLT 5 INSERTS", 
+        "upc_man": "788379739775", 
+        "upc_scp": "022315374409"
+    }, 
+    "022315374430": {
+        "part_number": "L21-1", 
+        "title": "DIFFUSER RING ", 
+        "upc_man": "788379740078", 
+        "upc_scp": "022315374430"
+    }, 
+    "022315374447": {
+        "part_number": "L23-4P1", 
+        "title": "LARGE BUSHING ", 
+        "upc_man": "788379740085", 
+        "upc_scp": "022315374447"
+    }, 
+    "022315375055": {
+        "part_number": "N20-26", 
+        "title": "GASKET SEAL PLATE ", 
+        "upc_man": "788379745219", 
+        "upc_scp": "022315375055"
+    }, 
+    "022315375079": {
+        "part_number": "N3-8", 
+        "title": "SEAL PLATE ", 
+        "upc_man": "788379745240", 
+        "upc_scp": "022315375079"
+    }, 
+    "022315375086": {
+        "part_number": "N3-9", 
+        "title": "SEAL PLATE ", 
+        "upc_man": "788379745257", 
+        "upc_scp": "022315375086"
+    }, 
+    "022315375192": {
+        "part_number": "PKG 184", 
+        "title": "COMM HAIR & LINT STRNR CSP PMP", 
+        "upc_man": "788379745752", 
+        "upc_scp": "022315375192"
+    }, 
+    "022315375208": {
+        "part_number": "PKG 184C", 
+        "title": "COMM HAIR & LINT STRNR EPX COAT", 
+        "upc_man": "788379745769", 
+        "upc_scp": "022315375208"
+    }, 
+    "022315375390": {
+        "part_number": "PS17-111", 
+        "title": "FLOAT SWITCH 120V 20' ", 
+        "upc_man": "788379747763", 
+        "upc_scp": "022315375390"
+    }, 
+    "022315375505": {
+        "part_number": "PS5-29P", 
+        "title": "IMPELLER ", 
+        "upc_man": "788379765514", 
+        "upc_scp": "022315375505"
+    }, 
+    "022315375543": {
+        "part_number": "PW117-231-TSE", 
+        "title": "POWERCORD 16/3 115V 20FT ", 
+        "upc_man": "788379845605", 
+        "upc_scp": "022315375543"
+    }, 
+    "022315375680": {
+        "part_number": "S04757", 
+        "title": "GSKT VLT 6-5/8ID 7-5/8OD (AS REQ FTD) .031", 
+        "upc_man": "788379849719", 
+        "upc_scp": "022315375680"
+    }, 
+    "022315375703": {
+        "part_number": "S05141", 
+        "title": "GASKET 5 3/8\" ID ", 
+        "upc_man": "", 
+        "upc_scp": "022315375703"
+    }, 
+    "022315375789": {
+        "part_number": "S11207", 
+        "title": "RNG RETAINING EXTERNAL 1-1/4 PH15-7M0 (", 
+        "upc_man": "788379849757", 
+        "upc_scp": "022315375789"
+    }, 
+    "022315375819": {
+        "part_number": "S13470", 
+        "title": "SET PACKING RING 6 ", 
+        "upc_man": "", 
+        "upc_scp": "022315375819"
+    }, 
+    "022315375871": {
+        "part_number": "S16767", 
+        "title": "RNG RTNG EXTERNAL 1-3/4 PH15-7MOSS", 
+        "upc_man": "788379782917", 
+        "upc_scp": "022315375871"
+    }, 
+    "022315375994": {
+        "part_number": "S22351", 
+        "title": "MTR 7.5HP 3600/60/1 OD 230V 213JM", 
+        "upc_man": "788379778668", 
+        "upc_scp": "022315375994"
+    }, 
+    "022315376083": {
+        "part_number": "S23488", 
+        "title": "NUT HEX 1/2-13NC 304SS ", 
+        "upc_man": "", 
+        "upc_scp": "022315376083"
+    }, 
+    "022315376106": {
+        "part_number": "S23619", 
+        "title": "CAPSCR HEX HD 1/2-13NC X 1LG 303SS (PU", 
+        "upc_man": "788379781880", 
+        "upc_scp": "022315376106"
+    }, 
+    "022315376229": {
+        "part_number": "S28885", 
+        "title": "MTR 10HP 3600/60/1 215JM ODP", 
+        "upc_man": "788379849917", 
+        "upc_scp": "022315376229"
+    }, 
+    "022315376250": {
+        "part_number": "S32014", 
+        "title": "SEAL MECH SHAFT 1-1/4TYPE21 SHORT BF1C1", 
+        "upc_man": "", 
+        "upc_scp": "022315376250"
+    }, 
+    "022315376267": {
+        "part_number": "S32015", 
+        "title": "SEAL MECH SHAFT 1-3/4TYPE21 SHORT BF1C1", 
+        "upc_man": "788379787523", 
+        "upc_scp": "022315376267"
+    }, 
+    "022315376472": {
+        "part_number": "U109-106SS", 
+        "title": "SHAFT SEAL PKG. ", 
+        "upc_man": "788379768843", 
+        "upc_scp": "022315376472"
+    }, 
+    "022315376502": {
+        "part_number": "U109-6B", 
+        "title": "SEAL SHAFT 5/8\"BUNA N ", 
+        "upc_man": "788379850326", 
+        "upc_scp": "022315376502"
+    }, 
+    "022315376533": {
+        "part_number": "U18-1399", 
+        "title": "CAPACITOR 36-43MF AOS#610807-011", 
+        "upc_man": "788379772734", 
+        "upc_scp": "022315376533"
+    }, 
+    "022315376601": {
+        "part_number": "U18-526", 
+        "title": "CAPACITOR 124-149MFD ", 
+        "upc_man": "", 
+        "upc_scp": "022315376601"
+    }, 
+    "022315376663": {
+        "part_number": "U30-22SS", 
+        "title": "STUD 3/8-16X1-1/4 ", 
+        "upc_man": "788379767020", 
+        "upc_scp": "022315376663"
+    }, 
+    "022315376786": {
+        "part_number": "U30-72SS", 
+        "title": "3/8-16X3/4 HEX CAPSCR ", 
+        "upc_man": "788379787363", 
+        "upc_scp": "022315376786"
+    }, 
+    "022315376809": {
+        "part_number": "U30-74ZP", 
+        "title": "3/8-16X1 HEX CAPSCR ", 
+        "upc_man": "788379763657", 
+        "upc_scp": "022315376809"
+    }, 
+    "022315376908": {
+        "part_number": "U43-12ZP", 
+        "title": "3/8\" MED WSHR USE ", 
+        "upc_man": "788379772437", 
+        "upc_scp": "022315376908"
+    }, 
+    "022315376939": {
+        "part_number": "U65-42A", 
+        "title": "KEY 1-1/2\" LG ", 
+        "upc_man": "788379772413", 
+        "upc_scp": "022315376939"
+    }, 
+    "022315376991": {
+        "part_number": "U9-156", 
+        "title": "ORNG ", 
+        "upc_man": "788379773632", 
+        "upc_scp": "022315376991"
+    }, 
+    "022315377011": {
+        "part_number": "U9-171", 
+        "title": "ORNG ", 
+        "upc_man": "", 
+        "upc_scp": "022315377011"
+    }, 
+    "022315377035": {
+        "part_number": "U9-265", 
+        "title": "ORNG ", 
+        "upc_man": "788379784010", 
+        "upc_scp": "022315377035"
+    }, 
+    "022315377134": {
+        "part_number": "U9-399", 
+        "title": "ORNG SQ CUT BUNA ", 
+        "upc_man": "788379776459", 
+        "upc_scp": "022315377134"
+    }, 
+    "022315377189": {
+        "part_number": "U9-96SS", 
+        "title": "SHAFT SEAL 1-1/8\" W/SS ", 
+        "upc_man": "788379851057", 
+        "upc_scp": "022315377189"
+    }, 
+    "022315377226": {
+        "part_number": "WC78-39T", 
+        "title": "PIPE PLG 1/2\" TAPED ", 
+        "upc_man": "788379774486", 
+        "upc_scp": "022315377226"
+    }, 
+    "022315377233": {
+        "part_number": "WC78-41T", 
+        "title": "PIPE PLG 1/8\" TAPED ", 
+        "upc_man": "", 
+        "upc_scp": "022315377233"
+    }, 
+    "718705120990": {
+        "part_number": "K12500", 
+        "title": "SNAP LOCK KIT ", 
+        "upc_man": "718705120991", 
+        "upc_scp": "718705120990"
+    }, 
+    "788379000172": {
+        "part_number": "R03024", 
+        "title": "BUSHING, INNER WHEEL- LEXAN # 141-701 WHITE", 
+        "upc_man": "788379701994", 
+        "upc_scp": "788379000172"
+    }, 
+    "788379001612": {
+        "part_number": "R172665X", 
+        "title": "HOUSING ONLY DFML-25 WH COMPACT W/SAFETY FLANGE", 
+        "upc_man": "", 
+        "upc_scp": "788379001612"
+    }, 
+    "788379002527": {
+        "part_number": "R151246", 
+        "title": "KIT TEST #78DPDT 12 PK ", 
+        "upc_man": "", 
+        "upc_scp": "788379002527"
+    }, 
+    "788379005948": {
+        "part_number": "R18761", 
+        "title": "1/4\" IDX6\" POLY ST ", 
+        "upc_man": "788379691233", 
+        "upc_scp": "788379005948"
+    }, 
+    "788379007096": {
+        "part_number": "R201766", 
+        "title": "HANDLE JOINING ASSEMBLY BULKCOMMERCIAL VACS 207,", 
+        "upc_man": "788379721015", 
+        "upc_scp": "788379007096"
+    }, 
+    "788379505912": {
+        "part_number": "LDF360N", 
+        "title": "FLOWMETER .5-5 3/4\"NYLN ", 
+        "upc_man": "788379505905", 
+        "upc_scp": "788379505912"
+    }, 
+    "788379602383": {
+        "part_number": "470367", 
+        "title": "HEAT EX ASSY 300 PLUS ", 
+        "upc_man": "", 
+        "upc_scp": "788379602383"
+    }, 
+    "788379604905": {
+        "part_number": "070257", 
+        "title": "MANF BRNTRY 250 MMX ", 
+        "upc_man": "788379604912", 
+        "upc_scp": "788379604905"
+    }, 
+    "788379605087": {
+        "part_number": "070346", 
+        "title": "BAFFLE 114-112 HTEXCH ", 
+        "upc_man": "788379605117", 
+        "upc_scp": "788379605087"
+    }, 
+    "788379605933": {
+        "part_number": "073752", 
+        "title": "BRNTRY ASY 150 MMX ", 
+        "upc_man": "788379700058", 
+        "upc_scp": "788379605933"
+    }, 
+    "788379606077": {
+        "part_number": "073862", 
+        "title": "FLUCOL 400 MMX ", 
+        "upc_man": "788379606138", 
+        "upc_scp": "788379606077"
+    }, 
+    "788379606329": {
+        "part_number": "075175", 
+        "title": "KIT GAS VLV 150/200NI MX ", 
+        "upc_man": "788379684457", 
+        "upc_scp": "788379606329"
+    }, 
+    "788379606541": {
+        "part_number": "075499", 
+        "title": "BRNTRY ASY 200NI MMX ", 
+        "upc_man": "788379606602", 
+        "upc_scp": "788379606541"
+    }, 
+    "788379609207": {
+        "part_number": "516274", 
+        "title": "PKG STD VINYL SCREW ", 
+        "upc_man": "788379624415", 
+        "upc_scp": "788379609207"
+    }, 
+    "78837962391": {
+        "part_number": "191468", 
+        "title": "PIPE ST BTM NEW ", 
+        "upc_man": "", 
+        "upc_scp": "78837962391"
+    }, 
+    "788379624491": {
+        "part_number": "76560300", 
+        "title": "LENS SET LUX GRN/BLU ", 
+        "upc_man": "788379651978", 
+        "upc_scp": "788379624491"
+    }, 
+    "788379625399": {
+        "part_number": "85000511", 
+        "title": "LID ASY SKIM BLK ", 
+        "upc_man": "788379627768", 
+        "upc_scp": "788379625399"
+    }, 
+    "788379625894": {
+        "part_number": "85009800", 
+        "title": "SCR KIT FAS100 XLG ", 
+        "upc_man": "788379703370", 
+        "upc_scp": "788379625894"
+    }, 
+    "788379645120": {
+        "part_number": "619479", 
+        "title": "BULB DIMPL RPLCMNT CSA AQLMNTR ASY", 
+        "upc_man": "", 
+        "upc_scp": "788379645120"
+    }, 
+    "788379648206": {
+        "part_number": "77163102", 
+        "title": "AQ 250W 120V 30' CSA ", 
+        "upc_man": "", 
+        "upc_scp": "788379648206"
+    }, 
+    "788379648466": {
+        "part_number": "78103202", 
+        "title": "SB SS 100W 12V 30' CSA ", 
+        "upc_man": "", 
+        "upc_scp": "788379648466"
+    }, 
+    "788379648879": {
+        "part_number": "78242202", 
+        "title": "FIX HSG 3/4\"BCK VNL SB CSA", 
+        "upc_man": "", 
+        "upc_scp": "788379648879"
+    }, 
+    "788379649364": {
+        "part_number": "78411102", 
+        "title": "AM 100W 12V 15' CSA ", 
+        "upc_man": "", 
+        "upc_scp": "788379649364"
+    }, 
+    "788379651190": {
+        "part_number": "79110100", 
+        "title": "CAP CORD SNAP ON ", 
+        "upc_man": "788379646141", 
+        "upc_scp": "788379651190"
+    }, 
+    "788379653613": {
+        "part_number": "LX80", 
+        "title": "CONTROLLER LX80 ", 
+        "upc_man": "788379309336", 
+        "upc_scp": "788379653613"
+    }, 
+    "788379654443": {
+        "part_number": "154909", 
+        "title": "MTR OUTRIGGER ", 
+        "upc_man": "788379669669", 
+        "upc_scp": "788379654443"
+    }, 
+    "788379654863": {
+        "part_number": "340289", 
+        "title": "PMP DYNII N1 1 W/25'CRD CSA", 
+        "upc_man": "", 
+        "upc_scp": "788379654863"
+    }, 
+    "788379657338": {
+        "part_number": "347934", 
+        "title": "PMP CMK 150 3450RPM 575V ", 
+        "upc_man": "", 
+        "upc_scp": "788379657338"
+    }, 
+    "788379657352": {
+        "part_number": "347936", 
+        "title": "PMP CMK 75 3450RPM 575V ", 
+        "upc_man": "", 
+        "upc_scp": "788379657352"
+    }, 
+    "788379657406": {
+        "part_number": "347941", 
+        "title": "PMP CHK-5- 5HP 3PH 200V W/POT", 
+        "upc_man": "788379657390", 
+        "upc_scp": "788379657406"
+    }, 
+    "788379659035": {
+        "part_number": "355639", 
+        "title": "PWREND CFII N1 1.5FE 2AE CNTRY", 
+        "upc_man": "788379659394", 
+        "upc_scp": "788379659035"
+    }, 
+    "788379659066": {
+        "part_number": "355642", 
+        "title": "PWREND W/SWTCH CFII N2 1.5F 2A CNTRY", 
+        "upc_man": "788379659424", 
+        "upc_scp": "788379659066"
+    }, 
+    "788379659202": {
+        "part_number": "355679", 
+        "title": "PWREND W/SWTCH CH N2 .75F 1A CNTRY", 
+        "upc_man": "", 
+        "upc_scp": "788379659202"
+    }, 
+    "788379659233": {
+        "part_number": "355682", 
+        "title": "PWREND W/SWTCH CH N2 2F 2.5A CNTRY", 
+        "upc_man": "", 
+        "upc_scp": "788379659233"
+    }, 
+    "788379667436": {
+        "part_number": "145322", 
+        "title": "FLT ASY SD60 ALMOND ", 
+        "upc_man": "", 
+        "upc_scp": "788379667436"
+    }, 
+    "788379669188": {
+        "part_number": "154579", 
+        "title": "BRIDGE TR OVAL CLSR ", 
+        "upc_man": "788379669249", 
+        "upc_scp": "788379669188"
+    }, 
+    "788379669294": {
+        "part_number": "154637", 
+        "title": "TNK ASY TR50 W/FT BUTT THD TAN", 
+        "upc_man": "788379695569", 
+        "upc_scp": "788379669294"
+    }, 
+    "788379669928": {
+        "part_number": "155324", 
+        "title": "ASY TNK TA100D W/FT ", 
+        "upc_man": "788379690106", 
+        "upc_scp": "788379669928"
+    }, 
+    "788379671944": {
+        "part_number": "59053500", 
+        "title": "CENTER CORE 50 SQ.FT. ", 
+        "upc_man": "788379671945", 
+        "upc_scp": "788379671944"
+    }, 
+    "788379673192": {
+        "part_number": "191519", 
+        "title": "GRD ASY ST80 COMPLT ", 
+        "upc_man": "788379695286", 
+        "upc_scp": "788379673192"
+    }, 
+    "788379676636": {
+        "part_number": "51001900", 
+        "title": "PLUG 1.5\" THD ABS ", 
+        "upc_man": "788379608958", 
+        "upc_scp": "788379676636"
+    }, 
+    "788379683672": {
+        "part_number": "072880", 
+        "title": "ROD CNTR STAKD BW4048 /SM2048", 
+        "upc_man": "788379699420", 
+        "upc_scp": "788379683672"
+    }, 
+    "788379685256": {
+        "part_number": "545100", 
+        "title": "FACEPLT WHT FOR 86205100 RET FTG 100PK", 
+        "upc_man": "", 
+        "upc_scp": "788379685256"
+    }, 
+    "788379688479": {
+        "part_number": "357228", 
+        "title": "POT AG ", 
+        "upc_man": "788379691233", 
+        "upc_scp": "788379688479"
+    }, 
+    "788379688769": {
+        "part_number": "170037", 
+        "title": "ELB FTG ASY CNC SYS ", 
+        "upc_man": "788379671419", 
+        "upc_scp": "788379688769"
+    }, 
+    "788379691387": {
+        "part_number": "347998", 
+        "title": "PMP OPTFL 1.5HP VD 25' CORD", 
+        "upc_man": "", 
+        "upc_scp": "788379691387"
+    }, 
+    "788379692780": {
+        "part_number": "XFM20", 
+        "title": "XMFR ASY LX220 CNTRL ", 
+        "upc_man": "", 
+        "upc_scp": "788379692780"
+    }, 
+    "788379693008": {
+        "part_number": "K21205", 
+        "title": "HOSE SECTION 40\" (Blue) M/F Kreepy", 
+        "upc_man": "", 
+        "upc_scp": "788379693008"
+    }, 
+    "788379694425": {
+        "part_number": "50152300", 
+        "title": "ORNG 2-133 ", 
+        "upc_man": "", 
+        "upc_scp": "788379694425"
+    }, 
+    "788379695187": {
+        "part_number": "271169", 
+        "title": "VLV TOP PH 2\"BLK ", 
+        "upc_man": "788379674878", 
+        "upc_scp": "788379695187"
+    }, 
+    "788379696719": {
+        "part_number": "471428", 
+        "title": "SWITCH AIR PRESS HI ALT  RES PWRMX", 
+        "upc_man": "788379715540", 
+        "upc_scp": "788379696719"
+    }, 
+    "788379696993": {
+        "part_number": "074216", 
+        "title": "BRACKET WASHER MMX ", 
+        "upc_man": "788379606299", 
+        "upc_scp": "788379696993"
+    }, 
+    "788379697167": {
+        "part_number": "071716", 
+        "title": "SCREW #6X.25 PH RH SS PL ", 
+        "upc_man": "788379699741", 
+        "upc_scp": "788379697167"
+    }, 
+    "788379697570": {
+        "part_number": "075788", 
+        "title": "RTNR BRNTRY 400 MMX ", 
+        "upc_man": "", 
+        "upc_scp": "788379697570"
+    }, 
+    "788379698362": {
+        "part_number": "79112400", 
+        "title": "BULB AQ 75W 12V MR16 HAL ", 
+        "upc_man": "788379646240", 
+        "upc_scp": "788379698362"
+    }, 
+    "788379698416": {
+        "part_number": "79113800", 
+        "title": "BULB AQ 250W 130V MC SCR BSE", 
+        "upc_man": "788379646264", 
+        "upc_scp": "788379698416"
+    }, 
+    "788379698546": {
+        "part_number": "79102900", 
+        "title": "BULB AQ 100W 120V MC SCR BSE", 
+        "upc_man": "788379645441", 
+        "upc_scp": "788379698546"
+    }, 
+    "788379698584": {
+        "part_number": "79107600", 
+        "title": "BULB AM 300W 120V MED BASE", 
+        "upc_man": "788379646028", 
+        "upc_scp": "788379698584"
+    }, 
+    "788379698614": {
+        "part_number": "79101900", 
+        "title": "BULB AM 300W 12V ", 
+        "upc_man": "788379703134", 
+        "upc_scp": "788379698614"
+    }, 
+    "788379698690": {
+        "part_number": "79210600", 
+        "title": "BOLT 1/4-20 x 1-5/8 SiBr ", 
+        "upc_man": "788379626174", 
+        "upc_scp": "788379698690"
+    }, 
+    "788379698720": {
+        "part_number": "79112700", 
+        "title": "BULB 250W 120V HAL AQ ", 
+        "upc_man": "788379646257", 
+        "upc_scp": "788379698720"
+    }, 
+    "788379698980": {
+        "part_number": "070517", 
+        "title": "BULB 120V 100W 7022 ", 
+        "upc_man": "788379696269", 
+        "upc_scp": "788379698980"
+    }, 
+    "788379698997": {
+        "part_number": "98218100", 
+        "title": "STANDOFF BRS FXTR HSG ", 
+        "upc_man": "788379653231", 
+        "upc_scp": "788379698997"
+    }, 
+    "788379699185": {
+        "part_number": "46815500", 
+        "title": "ORING 2-010 EPR 60-70SH ", 
+        "upc_man": "788379602437", 
+        "upc_scp": "788379699185"
+    }, 
+    "788379700225": {
+        "part_number": "354299", 
+        "title": "WRNCH ALLEN 6\" T-HNDL ", 
+        "upc_man": "788379700041", 
+        "upc_scp": "788379700225"
+    }, 
+    "788379700393": {
+        "part_number": "352245", 
+        "title": "BSHG STRN RELIEF ", 
+        "upc_man": "788379700652", 
+        "upc_scp": "788379700393"
+    }, 
+    "788379701048": {
+        "part_number": "98215200", 
+        "title": "NUT 10-24 HEX BRASS ", 
+        "upc_man": "788379653170", 
+        "upc_scp": "788379701048"
+    }, 
+    "788379701468": {
+        "part_number": "98207100", 
+        "title": "SCW 1/4-20X5/8 SS RH ", 
+        "upc_man": "807318018280", 
+        "upc_scp": "788379701468"
+    }, 
+    "788379701703": {
+        "part_number": "R172469", 
+        "title": "ASSEMBLY WEIR GATE ", 
+        "upc_man": "788379008895", 
+        "upc_scp": "788379701703"
+    }, 
+    "788379701994": {
+        "part_number": "R172471", 
+        "title": "GASKET FACEPLATE SV-330 MATERIAL", 
+        "upc_man": "788379008932", 
+        "upc_scp": "788379701994"
+    }, 
+    "788379702007": {
+        "part_number": "R172428", 
+        "title": "HOUSING ASY RTL&RCF 50S HI FLO", 
+        "upc_man": "788379008574", 
+        "upc_scp": "788379702007"
+    }, 
+    "788379702090": {
+        "part_number": "R172470", 
+        "title": "GASKET REAR SEALING SV-330 MATERIAL", 
+        "upc_man": "788379008925", 
+        "upc_scp": "788379702090"
+    }, 
+    "788379702229": {
+        "part_number": "R172473", 
+        "title": "COVER SAFETY FACEPLT WHT ", 
+        "upc_man": "788379010065", 
+        "upc_scp": "788379702229"
+    }, 
+    "788379702311": {
+        "part_number": "R22113", 
+        "title": "BASKET ASY SHORT ", 
+        "upc_man": "", 
+        "upc_scp": "788379702311"
+    }, 
+    "788379702366": {
+        "part_number": "R18854", 
+        "title": "STOP PIN ", 
+        "upc_man": "788379723699", 
+        "upc_scp": "788379702366"
+    }, 
+    "788379702953": {
+        "part_number": "516307", 
+        "title": "COLLAR VINYL W/INSRTS BLK EXP", 
+        "upc_man": "788379678029", 
+        "upc_scp": "788379702953"
+    }, 
+    "788379702960": {
+        "part_number": "516241", 
+        "title": "SCR #12-8x1.25 PN HD PHL THRD FORMING SS", 
+        "upc_man": "788379677619", 
+        "upc_scp": "788379702960"
+    }, 
+    "788379704315": {
+        "part_number": "347997", 
+        "title": "PMP OPTFL 1HP VD 25'CORD ", 
+        "upc_man": "", 
+        "upc_scp": "788379704315"
+    }, 
+    "788379707385": {
+        "part_number": "R172400", 
+        "title": "SCREEN RCF TOP INLET ", 
+        "upc_man": "788379702076", 
+        "upc_scp": "788379707385"
+    }, 
+    "788379708122": {
+        "part_number": "R172555DG", 
+        "title": "KIT FACEPLATE DARK GRAY ", 
+        "upc_man": "", 
+        "upc_scp": "788379708122"
+    }, 
+    "788379708269": {
+        "part_number": "R172612", 
+        "title": "SCREW #10x3/4 SS PH FT ", 
+        "upc_man": "788379009915", 
+        "upc_scp": "788379708269"
+    }, 
+    "788379713317": {
+        "part_number": "075127", 
+        "title": "ORIFICE PILOT HBR11 SS ", 
+        "upc_man": "788379665067", 
+        "upc_scp": "788379713317"
+    }, 
+    "788379715663": {
+        "part_number": "472465", 
+        "title": "PLUG EXHAUST VNT HOLE ", 
+        "upc_man": "", 
+        "upc_scp": "788379715663"
+    }, 
+    "788379717605": {
+        "part_number": "05057-0118", 
+        "title": "GSKT COLOR KIT ", 
+        "upc_man": "788379717599", 
+        "upc_scp": "788379717605"
+    }, 
+    "788379718558": {
+        "part_number": "05607-2030", 
+        "title": "LT UW 120V 250W 30'SNLT ", 
+        "upc_man": "022315212329", 
+        "upc_scp": "788379718558"
+    }, 
+    "788379719920": {
+        "part_number": "98215100", 
+        "title": "SCR 10-24X1/2 SLT HH BRS ", 
+        "upc_man": "788379653163", 
+        "upc_scp": "788379719920"
+    }, 
+    "788379720490": {
+        "part_number": "352209", 
+        "title": "SCR 8-32 X.5IN ", 
+        "upc_man": "788379658205", 
+        "upc_scp": "788379720490"
+    }, 
+    "788379723835": {
+        "part_number": "520658", 
+        "title": "LBL SET FEATURES ICP EZTCH", 
+        "upc_man": "", 
+        "upc_scp": "788379723835"
+    }, 
+    "788379724023": {
+        "part_number": "370239", 
+        "title": "KIT ADAPT BOOSTER PMP ", 
+        "upc_man": "788379724030", 
+        "upc_scp": "788379724023"
+    }, 
+    "788379724429": {
+        "part_number": "370258Z", 
+        "title": "KIT SCR AND LKWSHR COMBO ", 
+        "upc_man": "", 
+        "upc_scp": "788379724429"
+    }, 
+    "788379724740": {
+        "part_number": "145304", 
+        "title": "SYS CONFIG SD40 W/ 340291SR 25'CRD VD W/OHK", 
+        "upc_man": "", 
+        "upc_scp": "788379724740"
+    }, 
+    "788379726805": {
+        "part_number": "460759", 
+        "title": "KIT AIR ORIFICE 300K ", 
+        "upc_man": "788379726806", 
+        "upc_scp": "788379726805"
+    }, 
+    "788379727178": {
+        "part_number": "472703Z", 
+        "title": "KIT BRKT FRNT BRNTRY 300 ", 
+        "upc_man": "", 
+        "upc_scp": "788379727178"
+    }, 
+    "788379727185": {
+        "part_number": "472704Z", 
+        "title": "KIT BRKT FRNT BRNTRY 400 ", 
+        "upc_man": "", 
+        "upc_scp": "788379727185"
+    }, 
+    "788379730413": {
+        "part_number": "P6E6H36-209", 
+        "title": "PMP MAXEPRO 3HP 575V 3PH ", 
+        "upc_man": "", 
+        "upc_scp": "788379730413"
+    }, 
+    "788379730420": {
+        "part_number": "P6EA6F36-206", 
+        "title": "PMP MAXEPRO 1.5HP 575V 3PH", 
+        "upc_man": "", 
+        "upc_scp": "788379730420"
+    }, 
+    "788379730451": {
+        "part_number": "P6EA6G36-207", 
+        "title": "PMP MAXEPRO 2HP 575V 3PH ", 
+        "upc_man": "", 
+        "upc_scp": "788379730451"
+    }, 
+    "788379733469": {
+        "part_number": "C105-117P", 
+        "title": "IMP ", 
+        "upc_man": "", 
+        "upc_scp": "788379733469"
+    }, 
+    "788379735029": {
+        "part_number": "C198-3M", 
+        "title": "UNION HLF PKG 1-1/2\" SLP ", 
+        "upc_man": "", 
+        "upc_scp": "788379735029"
+    }, 
+    "788379739546": {
+        "part_number": "L0050700", 
+        "title": "ORFC NAT GAS 0-2000FT ", 
+        "upc_man": "", 
+        "upc_scp": "788379739546"
+    }, 
+    "788379740160": {
+        "part_number": "L76-37P", 
+        "title": "PUMP HALF ", 
+        "upc_man": "", 
+        "upc_scp": "788379740160"
+    }, 
+    "788379742249": {
+        "part_number": "MT2200EN18CCANJX", 
+        "title": "HTR OUTDRW/O PMP CU HX NAT", 
+        "upc_man": "788379742225", 
+        "upc_scp": "788379742249"
+    }, 
+    "788379742348": {
+        "part_number": "MT2800EN18CCACJX", 
+        "title": "HTR OUTDR W/O PMP CU HX NAT", 
+        "upc_man": "788379742362", 
+        "upc_scp": "788379742348"
+    }, 
+    "788379743185": {
+        "part_number": "200060", 
+        "title": "TEST STRIP SALT CARDED 10PER BOTTLE 12PK", 
+        "upc_man": "788379743192", 
+        "upc_scp": "788379743185"
+    }, 
+    "78837974338": {
+        "part_number": "K12414", 
+        "title": "KIT NUT/PIPE/WSHR/PTFE WASHER KRUISER", 
+        "upc_man": "788379743383", 
+        "upc_scp": "78837974338"
+    }, 
+    "788379743505": {
+        "part_number": "79131400Z", 
+        "title": "KIT 50W 12V BULB SUNBRTII", 
+        "upc_man": "", 
+        "upc_scp": "788379743505"
+    }, 
+    "788379743512": {
+        "part_number": "79131200Z", 
+        "title": "KIT 100W 12V BULB SNBRTII", 
+        "upc_man": "", 
+        "upc_scp": "788379743512"
+    }, 
+    "788379743574": {
+        "part_number": "79101900Z", 
+        "title": "KIT 300W 12V BULB SUNGLWII", 
+        "upc_man": "", 
+        "upc_scp": "788379743574"
+    }, 
+    "788379744182": {
+        "part_number": "340156", 
+        "title": "PMP EQK750 W/POT 7.5HP 575V 3PH", 
+        "upc_man": "", 
+        "upc_scp": "788379744182"
+    }, 
+    "788379745424": {
+        "part_number": "520910", 
+        "title": "PC100 CANADA ", 
+        "upc_man": "", 
+        "upc_scp": "788379745424"
+    }, 
+    "788379745431": {
+        "part_number": "520911", 
+        "title": "IC20 CANADA ", 
+        "upc_man": "", 
+        "upc_scp": "788379745431"
+    }, 
+    "788379746872": {
+        "part_number": "355201S", 
+        "title": "MTR PKG SQFL 3/4HPF 3PH 60HZ E 208 230V BLK", 
+        "upc_man": "788379701277", 
+        "upc_scp": "788379746872"
+    }, 
+    "788379746926": {
+        "part_number": "355218S", 
+        "title": "MTR PKG AF75 120/AFP75 120", 
+        "upc_man": "788379700102", 
+        "upc_scp": "788379746926"
+    }, 
+    "788379746933": {
+        "part_number": "355222S", 
+        "title": "MTR PKG AF180/AFP150 180 ", 
+        "upc_man": "788379700027", 
+        "upc_scp": "788379746933"
+    }, 
+    "788379747008": {
+        "part_number": "355375S", 
+        "title": "MTR PKG W/SWTCH SQFL 3/4HPF 1A 60HZ 2SP BLK", 
+        "upc_man": "788379700768", 
+        "upc_scp": "788379747008"
+    }, 
+    "788379747015": {
+        "part_number": "355376S", 
+        "title": "MTR PKG W/SWTCH SQFL 1HPF 1.5A 60HZ 2SP BLK", 
+        "upc_man": "788379701024", 
+        "upc_scp": "788379747015"
+    }, 
+    "788379747022": {
+        "part_number": "355377S", 
+        "title": "MTR PKG W/SWTCH SQFL 1.5 HPF 2A 60HZ 2SP BLK 23", 
+        "upc_man": "788379701178", 
+        "upc_scp": "788379747022"
+    }, 
+    "788379747039": {
+        "part_number": "355378S", 
+        "title": "MTR PKG W/SWTCH SQFL 2HPF 2.5A 60HZ 2SP BLK", 
+        "upc_man": "788379701291", 
+        "upc_scp": "788379747039"
+    }, 
+    "788379747268": {
+        "part_number": "356551S", 
+        "title": "MTR PKG TB 1HP1.5SPL 1PH 60HZ 115V2SP", 
+        "upc_man": "788379700355", 
+        "upc_scp": "788379747268"
+    }, 
+    "788379748470": {
+        "part_number": "581102FSZ", 
+        "title": "WTRFALL SH ST 2' Z ", 
+        "upc_man": "", 
+        "upc_scp": "788379748470"
+    }, 
+    "788379748517": {
+        "part_number": "581102FSG", 
+        "title": "WTRFALL SH ST 2' G ", 
+        "upc_man": "", 
+        "upc_scp": "788379748517"
+    }, 
+    "788379748647": {
+        "part_number": "581103FSGBF", 
+        "title": "WTRFALL SH ST 3' G BF ", 
+        "upc_man": "", 
+        "upc_scp": "788379748647"
+    }, 
+    "788379748685": {
+        "part_number": "581104FSWBF", 
+        "title": "WTRFALL SH ST 4' W BF ", 
+        "upc_man": "", 
+        "upc_scp": "788379748685"
+    }, 
+    "788379748739": {
+        "part_number": "581104FSP", 
+        "title": "WTRFALL SH ST 4' P ", 
+        "upc_man": "788379748760", 
+        "upc_scp": "788379748739"
+    }, 
+    "788379748791": {
+        "part_number": "581105FSW", 
+        "title": "WTRFALL SH ST 5' W ", 
+        "upc_man": "", 
+        "upc_scp": "788379748791"
+    }, 
+    "788379748838": {
+        "part_number": "581105FSG", 
+        "title": "WTRFALL SH ST 5' G ", 
+        "upc_man": "", 
+        "upc_scp": "788379748838"
+    }, 
+    "788379760465": {
+        "part_number": "580003", 
+        "title": "DECK JET II CASE OF 4 ", 
+        "upc_man": "788379760533", 
+        "upc_scp": "788379760465"
+    }, 
+    "788379762391": {
+        "part_number": "24761-0080", 
+        "title": "INLT FTG ASY ", 
+        "upc_man": "", 
+        "upc_scp": "788379762391"
+    }, 
+    "788379763022": {
+        "part_number": "23900-0144-12", 
+        "title": "ELEM CVRD MSTR PK 19-1/4\" CTN", 
+        "upc_man": "", 
+        "upc_scp": "788379763022"
+    }, 
+    "788379763237": {
+        "part_number": "24752-0071", 
+        "title": "TNK FTG 2\" ", 
+        "upc_man": "", 
+        "upc_scp": "788379763237"
+    }, 
+    "788379763688": {
+        "part_number": "340018", 
+        "title": "PMP EQWK500 W/O POT 5HP 208-230/460V 3PH 60HZ", 
+        "upc_man": "", 
+        "upc_scp": "788379763688"
+    }, 
+    "788379764449": {
+        "part_number": "WC97-17P", 
+        "title": "EYEBALL V-LNR INLT FTG ", 
+        "upc_man": "", 
+        "upc_scp": "788379764449"
+    }, 
+    "788379764463": {
+        "part_number": "WC97-21P", 
+        "title": "EYEBALL RTNG RNG V- ", 
+        "upc_man": "", 
+        "upc_scp": "788379764463"
+    }, 
+    "788379764470": {
+        "part_number": "WC2-10P", 
+        "title": "EYEBALL ADPT RNG V-LI ", 
+        "upc_man": "", 
+        "upc_scp": "788379764470"
+    }, 
+    "788379764661": {
+        "part_number": "14971-SM10E11", 
+        "title": "DIV HEAD MULT VLV ", 
+        "upc_man": "", 
+        "upc_scp": "788379764661"
+    }, 
+    "788379765774": {
+        "part_number": "14971-SM10E4", 
+        "title": "SCR SS 304 ", 
+        "upc_man": "", 
+        "upc_scp": "788379765774"
+    }, 
+    "788379765828": {
+        "part_number": "10364300", 
+        "title": "HEADER RETURN ", 
+        "upc_man": "", 
+        "upc_scp": "788379765828"
+    }, 
+    "788379767006": {
+        "part_number": "357273", 
+        "title": "DIFF EQ 5HP WATERFALL ", 
+        "upc_man": "", 
+        "upc_scp": "788379767006"
+    }, 
+    "788379767884": {
+        "part_number": "17190-0026", 
+        "title": "CAP & CORD ASY AG POOL ", 
+        "upc_man": "", 
+        "upc_scp": "788379767884"
+    }, 
+    "788379768249": {
+        "part_number": "23900-1175-12", 
+        "title": "GRID MSTR PK 12.42\" ", 
+        "upc_man": "", 
+        "upc_scp": "788379768249"
+    }, 
+    "788379768256": {
+        "part_number": "23900-1171-12", 
+        "title": "GRID MSTR PK 12.42\" ", 
+        "upc_man": "", 
+        "upc_scp": "788379768256"
+    }, 
+    "788379768263": {
+        "part_number": "23900-1170-12", 
+        "title": "GRID MSTR PK 13.8\" ", 
+        "upc_man": "", 
+        "upc_scp": "788379768263"
+    }, 
+    "788379769192": {
+        "part_number": "32800-0107", 
+        "title": "SEAL FOR TGL SWTCH ", 
+        "upc_man": "", 
+        "upc_scp": "788379769192"
+    }, 
+    "788379770693": {
+        "part_number": "U9-269", 
+        "title": "ORNG #2-225 ", 
+        "upc_man": "", 
+        "upc_scp": "788379770693"
+    }, 
+    "788379772086": {
+        "part_number": "WC108-141S1", 
+        "title": "FLT ELEM 50SQFT W/CTN C-7652", 
+        "upc_man": "", 
+        "upc_scp": "788379772086"
+    }, 
+    "788379773625": {
+        "part_number": "14971-SM10E2", 
+        "title": "PIN VLV HNDL SS ", 
+        "upc_man": "", 
+        "upc_scp": "788379773625"
+    }, 
+    "788379774462": {
+        "part_number": "17140-0026", 
+        "title": "GSKT TETRASEAL #258 ", 
+        "upc_man": "", 
+        "upc_scp": "788379774462"
+    }, 
+    "788379775216": {
+        "part_number": "17190-0021", 
+        "title": "MTR CVR AG POOL PMP ", 
+        "upc_man": "", 
+        "upc_scp": "788379775216"
+    }, 
+    "788379775476": {
+        "part_number": "23900-1173-12", 
+        "title": "GRID MSTR PK 9.69\" ", 
+        "upc_man": "", 
+        "upc_scp": "788379775476"
+    }, 
+    "788379775483": {
+        "part_number": "23900-1172-12", 
+        "title": "GRID MSTR PK 16.5\" ", 
+        "upc_man": "", 
+        "upc_scp": "788379775483"
+    }, 
+    "788379776367": {
+        "part_number": "09655-0010", 
+        "title": "SKMR SPACER BLOCK ", 
+        "upc_man": "", 
+        "upc_scp": "788379776367"
+    }, 
+    "788379776510": {
+        "part_number": "35407-0071", 
+        "title": "NUT 1/4-20 STD HEX SS ", 
+        "upc_man": "", 
+        "upc_scp": "788379776510"
+    }, 
+    "788379777012": {
+        "part_number": "77707-2431", 
+        "title": "GAS ORIFICE ADJUST KIT 200K NA", 
+        "upc_man": "", 
+        "upc_scp": "788379777012"
+    }, 
+    "788379777258": {
+        "part_number": "U9-158", 
+        "title": "ORNG ", 
+        "upc_man": "", 
+        "upc_scp": "788379777258"
+    }, 
+    "788379777449": {
+        "part_number": "17351-0102S", 
+        "title": "SHAFT SEAL SVC KIT ", 
+        "upc_man": "", 
+        "upc_scp": "788379777449"
+    }, 
+    "788379777555": {
+        "part_number": "77704-0100", 
+        "title": "VLV MLTPRT 2\" SVC ", 
+        "upc_man": "", 
+        "upc_scp": "788379777555"
+    }, 
+    "788379777715": {
+        "part_number": "17150-0012", 
+        "title": "KNOB ASY ", 
+        "upc_man": "", 
+        "upc_scp": "788379777715"
+    }, 
+    "788379777944": {
+        "part_number": "23900-1174-12", 
+        "title": "GRID MSTR PK 15.7\" ", 
+        "upc_man": "", 
+        "upc_scp": "788379777944"
+    }, 
+    "788379778231": {
+        "part_number": "23900-0144", 
+        "title": "ELEM CVRD 19-1/4\" ", 
+        "upc_man": "", 
+        "upc_scp": "788379778231"
+    }, 
+    "788379778286": {
+        "part_number": "42001-0075", 
+        "title": "INSUL CAP FLAME HLDR ", 
+        "upc_man": "", 
+        "upc_scp": "788379778286"
+    }, 
+    "788379778385": {
+        "part_number": "16920-0511", 
+        "title": "TGL SWTCH 1SP PMP ", 
+        "upc_man": "", 
+        "upc_scp": "788379778385"
+    }, 
+    "788379778699": {
+        "part_number": "24752-0530", 
+        "title": "INT ASY HRP30 FOR ", 
+        "upc_man": "", 
+        "upc_scp": "788379778699"
+    }, 
+    "788379778781": {
+        "part_number": "37337-6081", 
+        "title": "IMP SCR ", 
+        "upc_man": "", 
+        "upc_scp": "788379778781"
+    }, 
+    "788379779450": {
+        "part_number": "W0036500", 
+        "title": "THERMOCOUPLE ", 
+        "upc_man": "", 
+        "upc_scp": "788379779450"
+    }, 
+    "788379779856": {
+        "part_number": "14971-SM10E17", 
+        "title": "SIGHTGLS ", 
+        "upc_man": "", 
+        "upc_scp": "788379779856"
+    }, 
+    "788379779870": {
+        "part_number": "14971-SM10E3", 
+        "title": "WSHR VLV HNDL SS ", 
+        "upc_man": "788379791490", 
+        "upc_scp": "788379779870"
+    }, 
+    "788379779948": {
+        "part_number": "U30-64SS", 
+        "title": "SCR 5/16-18X1-1/4 HEX ", 
+        "upc_man": "", 
+        "upc_scp": "788379779948"
+    }, 
+    "788379780739": {
+        "part_number": "340017", 
+        "title": "PMP EQW500 W/O POT 5HP 208-230V 1PH 60HZ", 
+        "upc_man": "", 
+        "upc_scp": "788379780739"
+    }, 
+    "788379781101": {
+        "part_number": "RE0100900", 
+        "title": "IGNITION CNTRL ELEC NAT GAS STNDNG PLT", 
+        "upc_man": "", 
+        "upc_scp": "788379781101"
+    }, 
+    "788379781583": {
+        "part_number": "350170", 
+        "title": "DIFFUSER 2 1/2HP SF ", 
+        "upc_man": "", 
+        "upc_scp": "788379781583"
+    }, 
+    "788379782887": {
+        "part_number": "U43-11SS", 
+        "title": "WSHR 5/16\" MED KANTLINK ", 
+        "upc_man": "", 
+        "upc_scp": "788379782887"
+    }, 
+    "788379783068": {
+        "part_number": "42001-0107", 
+        "title": "XFMR 50VA 120/240V PRI 24V SEC", 
+        "upc_man": "022315315051", 
+        "upc_scp": "788379783068"
+    }, 
+    "788379783648": {
+        "part_number": "23900-1171", 
+        "title": "ELEM CVRD 12.42\" O/C ", 
+        "upc_man": "", 
+        "upc_scp": "788379783648"
+    }, 
+    "788379783945": {
+        "part_number": "P12119", 
+        "title": "LID ASY BTM BS6102100 ", 
+        "upc_man": "", 
+        "upc_scp": "788379783945"
+    }, 
+    "788379784089": {
+        "part_number": "77707-0451", 
+        "title": "GAS ORIFICE KIT 333K LP ", 
+        "upc_man": "", 
+        "upc_scp": "788379784089"
+    }, 
+    "788379784546": {
+        "part_number": "14965-0006", 
+        "title": "SPRNG SS ", 
+        "upc_man": "", 
+        "upc_scp": "788379784546"
+    }, 
+    "788379784676": {
+        "part_number": "S0063700", 
+        "title": "GSKT FLNG (QTY 2 REQ) ", 
+        "upc_man": "", 
+        "upc_scp": "788379784676"
+    }, 
+    "788379784751": {
+        "part_number": "77707-0461", 
+        "title": "GAS ORIFICE KIT 200K LP ", 
+        "upc_man": "", 
+        "upc_scp": "788379784751"
+    }, 
+    "788379784867": {
+        "part_number": "24201-0040", 
+        "title": "COL HUB ", 
+        "upc_man": "", 
+        "upc_scp": "788379784867"
+    }, 
+    "788379784997": {
+        "part_number": "35857-0021", 
+        "title": "DWL PIN 5/16\"X2.5\"302SS ", 
+        "upc_man": "", 
+        "upc_scp": "788379784997"
+    }, 
+    "788379785024": {
+        "part_number": "35515-1296", 
+        "title": "QUAD RNG Q4338 ", 
+        "upc_man": "", 
+        "upc_scp": "788379785024"
+    }, 
+    "788379785703": {
+        "part_number": "23900-1172", 
+        "title": "ELEM CVRD 16.5\" O/C ", 
+        "upc_man": "", 
+        "upc_scp": "788379785703"
+    }, 
+    "788379786182": {
+        "part_number": "16920-0017", 
+        "title": "BSKT TRAP DURA GLASS/MAX E GLASS", 
+        "upc_man": "", 
+        "upc_scp": "788379786182"
+    }, 
+    "788379786212": {
+        "part_number": "14971-SM10E16", 
+        "title": "GSKT FOR SIGHTGLS ", 
+        "upc_man": "", 
+        "upc_scp": "788379786212"
+    }, 
+    "788379786335": {
+        "part_number": "U30-52SS", 
+        "title": "SCR 1/4-20x3/4 HEX CAP ", 
+        "upc_man": "", 
+        "upc_scp": "788379786335"
+    }, 
+    "788379786342": {
+        "part_number": "U43-21SS", 
+        "title": "#8 EXT TOOTH WSHR ", 
+        "upc_man": "", 
+        "upc_scp": "788379786342"
+    }, 
+    "788379786380": {
+        "part_number": "U109-433SS", 
+        "title": "SHAFT SEAL PKG 1.25IN BUNATYPE 2100 SHORT", 
+        "upc_man": "", 
+        "upc_scp": "788379786380"
+    }, 
+    "788379786427": {
+        "part_number": "RE0066200", 
+        "title": "SWITCH DUAL AQUASTAT ", 
+        "upc_man": "", 
+        "upc_scp": "788379786427"
+    }, 
+    "788379786847": {
+        "part_number": "42002-0007S", 
+        "title": "KIT CNTRL BOARD BASIC ", 
+        "upc_man": "022315210639", 
+        "upc_scp": "788379786847"
+    }, 
+    "788379786892": {
+        "part_number": "37337-6080", 
+        "title": "IMP SCR ", 
+        "upc_man": "", 
+        "upc_scp": "788379786892"
+    }, 
+    "788379787196": {
+        "part_number": "17303-0001", 
+        "title": "SPA PMP BDY-MLDD DYN* ", 
+        "upc_man": "", 
+        "upc_scp": "788379787196"
+    }, 
+    "788379787233": {
+        "part_number": "14962-0017", 
+        "title": "PLG W/GSKT ASY ", 
+        "upc_man": "", 
+        "upc_scp": "788379787233"
+    }, 
+    "788379787301": {
+        "part_number": "PP2075", 
+        "title": "CVR W/ O-RING DURA- GLAS ", 
+        "upc_man": "022315202245", 
+        "upc_scp": "788379787301"
+    }, 
+    "788379787370": {
+        "part_number": "U30-542SS", 
+        "title": "SCR 8-32X7/8 HX HD MACH ", 
+        "upc_man": "", 
+        "upc_scp": "788379787370"
+    }, 
+    "788379787400": {
+        "part_number": "U30-922SS", 
+        "title": "MACH SCR HX HD 8-32 ", 
+        "upc_man": "", 
+        "upc_scp": "788379787400"
+    }, 
+    "788379787417": {
+        "part_number": "U43-62SS", 
+        "title": "WSHR 3/8NOM 1X.438X.083 ", 
+        "upc_man": "", 
+        "upc_scp": "788379787417"
+    }, 
+    "788379787493": {
+        "part_number": "U9-374", 
+        "title": "ORNG ", 
+        "upc_man": "", 
+        "upc_scp": "788379787493"
+    }, 
+    "788379787516": {
+        "part_number": "U9-359", 
+        "title": "ORNG #2-112 N674-70 ", 
+        "upc_man": "", 
+        "upc_scp": "788379787516"
+    }, 
+    "788379787554": {
+        "part_number": "6020018", 
+        "title": "ORNG 226 BUNA 70 0.139 1.984", 
+        "upc_man": "", 
+        "upc_scp": "788379787554"
+    }, 
+    "788379788483": {
+        "part_number": "357102", 
+        "title": "GSKT SLPL WF/INTFLO TAN SANTOPRENE PRIOR 2/1/08", 
+        "upc_man": "788379659493", 
+        "upc_scp": "788379788483"
+    }, 
+    "788379789107": {
+        "part_number": "155710", 
+        "title": "CONN HSE ASY OPTFL/DYN VD TO SD40", 
+        "upc_man": "788379789091", 
+        "upc_scp": "788379789107"
+    }, 
+    "788379789114": {
+        "part_number": "155711", 
+        "title": "CONN HSE ASY OPTFL/DYN VD TO SD60", 
+        "upc_man": "788379789091", 
+        "upc_scp": "788379789114"
+    }, 
+    "788379790035": {
+        "part_number": "500145", 
+        "title": "VGBA 8\"MNDRN CVR/SHORT RNG BLK 2PK", 
+        "upc_man": "", 
+        "upc_scp": "788379790035"
+    }, 
+    "788379790042": {
+        "part_number": "600054", 
+        "title": "CONTROLLER INTELLIBRITE ", 
+        "upc_man": "", 
+        "upc_scp": "788379790042"
+    }, 
+    "788379791841": {
+        "part_number": "510583Z", 
+        "title": "KIT VGBA PLASTITE #10-14 x1.50 316SS", 
+        "upc_man": "", 
+        "upc_scp": "788379791841"
+    }, 
+    "788379792336": {
+        "part_number": "473785", 
+        "title": "FAN MTR W/ACORN NUT KIT ", 
+        "upc_man": "788797923361", 
+        "upc_scp": "788379792336"
+    }, 
+    "788379801922": {
+        "part_number": "070731Z", 
+        "title": "KIT COMPRESSION RNG FLT ", 
+        "upc_man": "788379683146", 
+        "upc_scp": "788379801922"
+    }, 
+    "788379801939": {
+        "part_number": "071136Z", 
+        "title": "KIT KNB PLSTC LOOP ASY ", 
+        "upc_man": "788379801922", 
+        "upc_scp": "788379801939"
+    }, 
+    "788379803216": {
+        "part_number": "174955Z", 
+        "title": "WSHR LOCK KIT 5/16\"SS ", 
+        "upc_man": "788379695576", 
+        "upc_scp": "788379803216"
+    }, 
+    "788379803995": {
+        "part_number": "602000", 
+        "title": "LT INTLBRT 5G 30' 120V COLOR POOL CSA", 
+        "upc_man": "", 
+        "upc_scp": "788379803995"
+    }, 
+    "788379804015": {
+        "part_number": "602002", 
+        "title": "LT INTLBRT 5G 100' 120V COLOR POOL CSA", 
+        "upc_man": "", 
+        "upc_scp": "788379804015"
+    }, 
+    "788379804022": {
+        "part_number": "602003", 
+        "title": "LT INTLBRT 5G 150' 120V COLOR POOL CSA", 
+        "upc_man": "", 
+        "upc_scp": "788379804022"
+    }, 
+    "788379804046": {
+        "part_number": "602010", 
+        "title": "LT INTLBRT 5G 30' 12V COLOR POOL CSA", 
+        "upc_man": "", 
+        "upc_scp": "788379804046"
+    }, 
+    "788379804060": {
+        "part_number": "602012", 
+        "title": "LT INTLBRT 5G 100' 12V COLOR POOL CSA", 
+        "upc_man": "", 
+        "upc_scp": "788379804060"
+    }, 
+    "788379804930": {
+        "part_number": "071361S", 
+        "title": "MTR PKG 15HP 3PH 208-220/440V C PUMP", 
+        "upc_man": "788379664718", 
+        "upc_scp": "788379804930"
+    }, 
+    "788379805210": {
+        "part_number": "340028", 
+        "title": "PMP EQW500 W/POT 5HP 208-230V 1PH 60HZ", 
+        "upc_man": "788379689629", 
+        "upc_scp": "788379805210"
+    }, 
+    "788379805227": {
+        "part_number": "JV6", 
+        "title": "SHAFT 3PK ", 
+        "upc_man": "807318003293", 
+        "upc_scp": "788379805227"
+    }, 
+    "788379805234": {
+        "part_number": "ED10P", 
+        "title": "FLOAT FEED LINE LLD10; S038; LD10P", 
+        "upc_man": "807318017986", 
+        "upc_scp": "788379805234"
+    }, 
+    "788379805241": {
+        "part_number": "ED45", 
+        "title": "HOSE FEED WHT 11' 2\" (LLD45)", 
+        "upc_man": "807318018006", 
+        "upc_scp": "788379805241"
+    }, 
+    "788379805258": {
+        "part_number": "ED50", 
+        "title": "HOSE FEED CLEAR 7'-8\"SFT (REPL. LLD50)", 
+        "upc_man": "807318018013", 
+        "upc_scp": "788379805258"
+    }, 
+    "788379805265": {
+        "part_number": "14962-0012", 
+        "title": "ADPT 1-1/2\"MPTX1-1/2\"HSE ", 
+        "upc_man": "022315128347", 
+        "upc_scp": "788379805265"
+    }, 
+    "788379805319": {
+        "part_number": "460962", 
+        "title": "HTPMP ULTRATEMP 110 BLK 108,000 BTU", 
+        "upc_man": "788379805098", 
+        "upc_scp": "788379805319"
+    }, 
+    "788379805357": {
+        "part_number": "LLC1PMG", 
+        "title": "TIRE PLATINUM GRAY ", 
+        "upc_man": "807318018372", 
+        "upc_scp": "788379805357"
+    }, 
+    "788379807306": {
+        "part_number": "521177", 
+        "title": "SPACOMMAND BLK 250' ", 
+        "upc_man": "788379807290", 
+        "upc_scp": "788379807306"
+    }, 
+    "788379807818": {
+        "part_number": "08650-0007", 
+        "title": "BSKT HNDL ASY ", 
+        "upc_man": "", 
+        "upc_scp": "788379807818"
+    }, 
+    "788379807825": {
+        "part_number": "08650-0022", 
+        "title": "WEIR ASY ", 
+        "upc_man": "", 
+        "upc_scp": "788379807825"
+    }, 
+    "788379816759": {
+        "part_number": "145351", 
+        "title": "SYS CONFIG SD40 OPTFL 1HP 25' CRD VD", 
+        "upc_man": "", 
+        "upc_scp": "788379816759"
+    }, 
+    "788379816889": {
+        "part_number": "14965-0028", 
+        "title": "PLUG/GSKT ASY ", 
+        "upc_man": "", 
+        "upc_scp": "788379816889"
+    }, 
+    "788379816902": {
+        "part_number": "14971-SM10E14", 
+        "title": "NUT VLV COVER SS ", 
+        "upc_man": "", 
+        "upc_scp": "788379816902"
+    }, 
+    "788379817077": {
+        "part_number": "155728", 
+        "title": "CONN HSE ASY JWP/ABG VD TO 22\" CFII", 
+        "upc_man": "788979817077", 
+        "upc_scp": "788379817077"
+    }, 
+    "788379817435": {
+        "part_number": "16920-0011", 
+        "title": "LID ", 
+        "upc_man": "", 
+        "upc_scp": "788379817435"
+    }, 
+    "788379817954": {
+        "part_number": "194988Z", 
+        "title": "KIT SPRING NS RPLCMNT ", 
+        "upc_man": "", 
+        "upc_scp": "788379817954"
+    }, 
+    "788379828684": {
+        "part_number": "24761-0037", 
+        "title": "INLT SUB ASY ", 
+        "upc_man": "", 
+        "upc_scp": "788379828684"
+    }, 
+    "788379828943": {
+        "part_number": "25010-9101", 
+        "title": "CLMP ASY PTM UPPR ", 
+        "upc_man": "999999999993", 
+        "upc_scp": "788379828943"
+    }, 
+    "788379829131": {
+        "part_number": "27001-0061S", 
+        "title": "ORNG SVC KIT ", 
+        "upc_man": "", 
+        "upc_scp": "788379829131"
+    }, 
+    "788379829926": {
+        "part_number": "340069", 
+        "title": "PMP OPTIFLO 2HP SPL HD 3'TWL", 
+        "upc_man": "788379807054", 
+        "upc_scp": "788379829926"
+    }, 
+    "788379830076": {
+        "part_number": "350166", 
+        "title": "GASKET EQ LID ", 
+        "upc_man": "788379704063", 
+        "upc_scp": "788379830076"
+    }, 
+    "788379830397": {
+        "part_number": "35505-1440", 
+        "title": "ORNG 6.9 OD 6.35 ID ", 
+        "upc_man": "", 
+        "upc_scp": "788379830397"
+    }, 
+    "788379830472": {
+        "part_number": "356440S", 
+        "title": "MTR PKG TB 1.5HP CSA 1PH 60HZ 115V WO SWTCH", 
+        "upc_man": "788379701369", 
+        "upc_scp": "788379830472"
+    }, 
+    "788379830878": {
+        "part_number": "42002-0025T", 
+        "title": "SWTCH AGS 140F TAPED ", 
+        "upc_man": "", 
+        "upc_scp": "788379830878"
+    }, 
+    "788379831318": {
+        "part_number": "473024Z", 
+        "title": "COMPR TRANE GH633-LL1-GS ASY REPLACEMENT", 
+        "upc_man": "", 
+        "upc_scp": "788379831318"
+    }, 
+    "788379831325": {
+        "part_number": "473025Z", 
+        "title": "COMPR TRANE GH673-LM1-GS ASY REPLACEMENT", 
+        "upc_man": "", 
+        "upc_scp": "788379831325"
+    }, 
+    "788379832506": {
+        "part_number": "520119Z", 
+        "title": "DEADFRONT PANEL INTLTCH RPLCMNT", 
+        "upc_man": "", 
+        "upc_scp": "788379832506"
+    }, 
+    "788379832742": {
+        "part_number": "520991Z", 
+        "title": "KIT DOOR LX220/820 ", 
+        "upc_man": "", 
+        "upc_scp": "788379832742"
+    }, 
+    "788379832872": {
+        "part_number": "521248Z", 
+        "title": "KIT FUSE HOLDER INTLCHLR ", 
+        "upc_man": "788379805746", 
+        "upc_scp": "788379832872"
+    }, 
+    "788379833060": {
+        "part_number": "541203", 
+        "title": "INLET 1\" DIR FTG WHT ", 
+        "upc_man": "", 
+        "upc_scp": "788379833060"
+    }, 
+    "788379835156": {
+        "part_number": "77707-0017", 
+        "title": "CONNECTOR TUBE KIT GAS HEATER", 
+        "upc_man": "022315302792", 
+        "upc_scp": "788379835156"
+    }, 
+    "788379850333": {
+        "part_number": "U109-93SS", 
+        "title": "SEAL PKG 5/8 IN SHAFT W/CRANE LAST BELLOWS", 
+        "upc_man": "", 
+        "upc_scp": "788379850333"
+    }, 
+    "788379850685": {
+        "part_number": "U30-742SS", 
+        "title": "SCR 10-16-1.12 HI-LO HEX WSHR SS", 
+        "upc_man": "", 
+        "upc_scp": "788379850685"
+    }, 
+    "788379850838": {
+        "part_number": "U79-11", 
+        "title": "DURA-GLAS LID WRENCH ", 
+        "upc_man": "", 
+        "upc_scp": "788379850838"
+    }, 
+    "788379850890": {
+        "part_number": "U9-228A-50", 
+        "title": "MSTR PK ORNG PMP ", 
+        "upc_man": "", 
+        "upc_scp": "788379850890"
+    }, 
+    "788379850906": {
+        "part_number": "U9-229", 
+        "title": "ORNG MRC #8435 COMP 525LF", 
+        "upc_man": "", 
+        "upc_scp": "788379850906"
+    }, 
+    "788379850982": {
+        "part_number": "U9-375", 
+        "title": "ORNG MRC 525LF COMP 8438 MINN. P/N", 
+        "upc_man": "", 
+        "upc_scp": "788379850982"
+    }, 
+    "788379851576": {
+        "part_number": "160351", 
+        "title": "FLT POSICLEAR RP 100 SF BLK", 
+        "upc_man": "788379851538", 
+        "upc_scp": "788379851576"
+    }, 
+    "788379851996": {
+        "part_number": "023026", 
+        "title": "PMP XPDS-30 208-230V 2.5HP 2SP UP RATED", 
+        "upc_man": "", 
+        "upc_scp": "788379851996"
+    }, 
+    "788379852009": {
+        "part_number": "023027", 
+        "title": "PMP XP-30 208-230V 2.5HP STD UP RATED", 
+        "upc_man": "", 
+        "upc_scp": "788379852009"
+    }, 
+    "788379852016": {
+        "part_number": "023028", 
+        "title": "PMP XPE-30 208-230v 2.5hp EE Up-Rated", 
+        "upc_man": "", 
+        "upc_scp": "788379852016"
+    }, 
+    "788379852153": {
+        "part_number": "022011", 
+        "title": "PMP XFE-20 208-230V 5HP EE FULL RATED", 
+        "upc_man": "788379851798", 
+        "upc_scp": "788379852153"
+    }, 
+    "788379852610": {
+        "part_number": "270119Z", 
+        "title": "FLAPPER CHK VLV RPLCMNT ", 
+        "upc_man": "788379855550", 
+        "upc_scp": "788379852610"
+    }, 
+    "788379852856": {
+        "part_number": "075271Z", 
+        "title": "POT C SER RPLCMNT ", 
+        "upc_man": "788379701017", 
+        "upc_scp": "788379852856"
+    }, 
+    "788379853006": {
+        "part_number": "521378", 
+        "title": "TANK 4GAL MURIATIC ACID ", 
+        "upc_man": "788379807030", 
+        "upc_scp": "788379853006"
+    }, 
+    "788379853013": {
+        "part_number": "521397", 
+        "title": "TANK 4GAL LIQ CHLORINE ", 
+        "upc_man": "788379807047", 
+        "upc_scp": "788379853013"
+    }, 
+    "788379853051": {
+        "part_number": "U11-182PM", 
+        "title": "UNION COLLAR 1-1/2\" ", 
+        "upc_man": "", 
+        "upc_scp": "788379853051"
+    }, 
+    "788379853068": {
+        "part_number": "U11-183PM", 
+        "title": "UNION ADPT 1-1/2\" SLIP WHT", 
+        "upc_man": "", 
+        "upc_scp": "788379853068"
+    }, 
+    "788379853198": {
+        "part_number": "022005", 
+        "title": "PMP INT VS INTLFLO XF VARIABLE SPEED", 
+        "upc_man": "078837853198", 
+        "upc_scp": "788379853198"
+    }, 
+    "788379853341": {
+        "part_number": "602055", 
+        "title": "LT GLOBRITE 12V 100' COLOR", 
+        "upc_man": "", 
+        "upc_scp": "788379853341"
+    }, 
+    "788379853372": {
+        "part_number": "620040", 
+        "title": "NICHE GNITE GLOBRT ", 
+        "upc_man": "", 
+        "upc_scp": "788379853372"
+    }, 
+    "788379856748": {
+        "part_number": "472150", 
+        "title": "IGNITION MODULE ", 
+        "upc_man": "788379686376", 
+        "upc_scp": "788379856748"
+    }, 
+    "788379856892": {
+        "part_number": "RE0013000", 
+        "title": "SWITCH FLOW KIT INDR/ OUTDR", 
+        "upc_man": "788379784690", 
+        "upc_scp": "788379856892"
+    }, 
+    "788379856908": {
+        "part_number": "C76-71P", 
+        "title": "BDY TNK/TRAP ", 
+        "upc_man": "", 
+        "upc_scp": "788379856908"
+    }, 
+    "788379857028": {
+        "part_number": "460931", 
+        "title": "HTPMP ULTRATEMP 90 ALMD 90,000 BTU", 
+        "upc_man": "788379848538", 
+        "upc_scp": "788379857028"
+    }, 
+    "788379857035": {
+        "part_number": "460961", 
+        "title": "HTPMP ULTRATEMP 90 BLK 90,000 BTU", 
+        "upc_man": "788379848545", 
+        "upc_scp": "788379857035"
+    }, 
+    "788379857042": {
+        "part_number": "PHK2RAY6D-101L", 
+        "title": "PMP W/SWTCH SUPERMAX N2 3/4A HP 115V", 
+        "upc_man": "788379852467", 
+        "upc_scp": "788379857042"
+    }, 
+    "788379857059": {
+        "part_number": "619963", 
+        "title": "XFMR 120 TO 12 13 OR 14 300W", 
+        "upc_man": "788379855772", 
+        "upc_scp": "788379857059"
+    }, 
+    "788379857097": {
+        "part_number": "MT1670EN09CBPN", 
+        "title": "HTR OUTDR W/PMP CU NI HX NAT", 
+        "upc_man": "788379741792", 
+        "upc_scp": "788379857097"
+    }, 
+    "788379859091": {
+        "part_number": "461033", 
+        "title": "HTR 100 MMX N DSI INTNL NATURAL GAS", 
+        "upc_man": "788379600549", 
+        "upc_scp": "788379859091"
+    }, 
+    "788379859107": {
+        "part_number": "461034", 
+        "title": "HTR 100 MMX P DSI INTNL PROPANE GAS", 
+        "upc_man": "788379600556", 
+        "upc_scp": "788379859107"
+    }, 
+    "788379859114": {
+        "part_number": "461035", 
+        "title": "HTR 100 MMX N MV INTNL NATURAL GAS", 
+        "upc_man": "788379600587", 
+        "upc_scp": "788379859114"
+    }, 
+    "788379859121": {
+        "part_number": "461036", 
+        "title": "HTR 100 MMX P MV INTNL PROPANE GAS", 
+        "upc_man": "788379600594", 
+        "upc_scp": "788379859121"
+    }, 
+    "788379859138": {
+        "part_number": "461037", 
+        "title": "HTR 100 MMX N DSI W/CORD INTNL NATURAL GAS", 
+        "upc_man": "788379600846", 
+        "upc_scp": "788379859138"
+    }, 
+    "788379859145": {
+        "part_number": "461038", 
+        "title": "HTR 100 MMX P DSI W/CORD INTNL PROPANE GAS", 
+        "upc_man": "788379600846", 
+        "upc_scp": "788379859145"
+    }, 
+    "788379859152": {
+        "part_number": "461039", 
+        "title": "HTR 75 MMX N DSI INTNL NATURAL GAS", 
+        "upc_man": "", 
+        "upc_scp": "788379859152"
+    }, 
+    "788379859169": {
+        "part_number": "461040", 
+        "title": "HTR 150 CH NM INTNL NATURAL GAS", 
+        "upc_man": "788379601652", 
+        "upc_scp": "788379859169"
+    }, 
+    "788379859176": {
+        "part_number": "461041", 
+        "title": "HTR 200 CH NM INTNL NATURAL GAS", 
+        "upc_man": "788379601669", 
+        "upc_scp": "788379859176"
+    }, 
+    "788379859183": {
+        "part_number": "461042", 
+        "title": "HTR 250 CH NM INTNL NATURAL GAS", 
+        "upc_man": "788379601676", 
+        "upc_scp": "788379859183"
+    }, 
+    "788379859213": {
+        "part_number": "461045", 
+        "title": "HTR 400 CH NM INTNL NATURAL GAS", 
+        "upc_man": "788379601706", 
+        "upc_scp": "788379859213"
+    }, 
+    "788379859220": {
+        "part_number": "461046", 
+        "title": "HTR 150 CH PM INTNL PROPANE GAS", 
+        "upc_man": "788379601775", 
+        "upc_scp": "788379859220"
+    }, 
+    "788379859237": {
+        "part_number": "461047", 
+        "title": "HTR 200 CH PM INTNL PROPANE GAS", 
+        "upc_man": "788379601782", 
+        "upc_scp": "788379859237"
+    }, 
+    "788379859244": {
+        "part_number": "461048", 
+        "title": "HTR 250 CH PM INTNL PROPANE GAS", 
+        "upc_man": "788379601799", 
+        "upc_scp": "788379859244"
+    }, 
+    "788379859275": {
+        "part_number": "461051", 
+        "title": "HTR 400 CH PM INTNL PROPANE GAS", 
+        "upc_man": "788379601829", 
+        "upc_scp": "788379859275"
+    }, 
+    "788379859282": {
+        "part_number": "461052", 
+        "title": "HTR 150 CH PM HALT INTNL PROPANE GAS", 
+        "upc_man": "788379601836", 
+        "upc_scp": "788379859282"
+    }, 
+    "788379859299": {
+        "part_number": "461053", 
+        "title": "HTR 200 CH PM HALT INTNL PROPANE GAS", 
+        "upc_man": "788379601843", 
+        "upc_scp": "788379859299"
+    }, 
+    "788379859305": {
+        "part_number": "461054", 
+        "title": "HTR 250 CH PM HALT INTNL PROPANE GAS", 
+        "upc_man": "788379601850", 
+        "upc_scp": "788379859305"
+    }, 
+    "788379859435": {
+        "part_number": "602065", 
+        "title": "LAMP AMBRT COLOR 120V ", 
+        "upc_man": "788379859434", 
+        "upc_scp": "788379859435"
+    }, 
+    "788379860295": {
+        "part_number": "522104", 
+        "title": "SCREENLOGIC BUNDLE ", 
+        "upc_man": "788379660295", 
+        "upc_scp": "788379860295"
+    }, 
+    "788379862220": {
+        "part_number": "262525", 
+        "title": "VLV 2\" TOP MNT HYBRID W/FITTINGS", 
+        "upc_man": "", 
+        "upc_scp": "788379862220"
+    }, 
+    "788379863791": {
+        "part_number": "370524", 
+        "title": "HOSE SET 20 PACK 40\" ", 
+        "upc_man": "788379863760", 
+        "upc_scp": "788379863791"
+    }, 
+    "788379864934": {
+        "part_number": "11230", 
+        "title": "AQUATRAM LT W/ANCHOR KIT ", 
+        "upc_man": "", 
+        "upc_scp": "788379864934"
+    }, 
+    "788379864941": {
+        "part_number": "11230-A", 
+        "title": "AQUATRAM LT WO ANCHOR KIT", 
+        "upc_man": "", 
+        "upc_scp": "788379864941"
+    }, 
+    "788379864958": {
+        "part_number": "11200", 
+        "title": "AQUATRAM W/ANCHOR ", 
+        "upc_man": "", 
+        "upc_scp": "788379864958"
+    }, 
+    "788379864965": {
+        "part_number": "11250", 
+        "title": "AQUATRAM 360 W/ANCHOR ", 
+        "upc_man": "", 
+        "upc_scp": "788379864965"
+    }, 
+    "788379864972": {
+        "part_number": "11250-A", 
+        "title": "AQUATRAM 360 WO ANCHOR ", 
+        "upc_man": "", 
+        "upc_scp": "788379864972"
+    }, 
+    "788379864989": {
+        "part_number": "11280", 
+        "title": "AQUATRAM PT PORTABLE LIFT", 
+        "upc_man": "", 
+        "upc_scp": "788379864989"
+    }, 
+    "788379864996": {
+        "part_number": "11285", 
+        "title": "AQUATRAM PT PRTCTV COVER ", 
+        "upc_man": "", 
+        "upc_scp": "788379864996"
+    }, 
+    "788379865009": {
+        "part_number": "400023Z", 
+        "title": "IMP ASY 5HP WF XF RPLCMT ", 
+        "upc_man": "", 
+        "upc_scp": "788379865009"
+    }, 
+    "788379865016": {
+        "part_number": "U11-198P", 
+        "title": "ADPT 2\" NPT ", 
+        "upc_man": "", 
+        "upc_scp": "788379865016"
+    }, 
+    "788379865030": {
+        "part_number": "355017S", 
+        "title": "MTR PKG SQFL 3HP S 1PH 1SP 208-230V BLK", 
+        "upc_man": "", 
+        "upc_scp": "788379865030"
+    }, 
+    "788379865047": {
+        "part_number": "355015S", 
+        "title": "MTR PKG 2HP 2.5A 1PH 1SP 208-230V BLK", 
+        "upc_man": "", 
+        "upc_scp": "788379865047"
+    }, 
+    "788379865474": {
+        "part_number": "271073Z", 
+        "title": "SPACER ORING RPLCMNT ", 
+        "upc_man": "", 
+        "upc_scp": "788379865474"
+    }, 
+    "78837989336": {
+        "part_number": "461057", 
+        "title": "HTR 400 CH PM HALT INTNL PROPANE GAS", 
+        "upc_man": "788379601881", 
+        "upc_scp": "78837989336"
+    }, 
+    "78879693978": {
+        "part_number": "98209803", 
+        "title": "AIR RELIEF ASY MANF ", 
+        "upc_man": "", 
+        "upc_scp": "78879693978"
+    }, 
+    "78879694210": {
+        "part_number": "192165", 
+        "title": "TUBE BREATHER ", 
+        "upc_man": "", 
+        "upc_scp": "78879694210"
+    }, 
+    "78879702038": {
+        "part_number": "R172393", 
+        "title": "ORING #O14 ABS EP ", 
+        "upc_man": "", 
+        "upc_scp": "78879702038"
+    }, 
+    "8010583091861": {
+        "part_number": "35505-1426", 
+        "title": "ORNG ", 
+        "upc_man": "801058309189", 
+        "upc_scp": "8010583091861"
+    }, 
+    "801058349382": {
+        "part_number": "U197-8A", 
+        "title": "OIL IN CONTAINER 1 QUART ", 
+        "upc_man": "788379773663", 
+        "upc_scp": "801058349382"
+    }, 
+    "807318018167": {
+        "part_number": "EU78", 
+        "title": "NUT FOR ROLLER ARM - 2-P K - (REPL. JV42; LLU78;", 
+        "upc_man": "807318002838", 
+        "upc_scp": "807318018167"
+    }
+}

@@ -3,34 +3,42 @@ import json
 import csv, codecs, cStringIO
 import re
 from copy import deepcopy
+from scripts import make_price, get_manufacturer
 from shopify_variables import (SHOPIFY_TEMPLATE, SHOPIFY_HEADERS)
 from aps_categories import COLLECTIONS, MENUS, _CATEGORIES, TYPES_N_TAGS as TNT
-from categories import _CATEGORIES
 
 misc_counter = 0
 counter = 0
-multiplier = .6
-infile = 'hayward_shopify.json'
-op_infile = '../optimus/optimus_hay01.json'
-outfile = 'merged_hayward_shopify.csv'
+multiplier = .5
+filename = 'srsmith'
+infile = '../shopify/shopify_json/{}_shopify.json'.format(filename)
+op_infile = '../optimus/{}_optimus.json'.format(filename)
+outfile = '../shopify/shopify_ready_csv/merged_{}2_shopify.csv'.format(filename)
+notfound = []
 
-def shopify_converter(infile, outfile):
-    with open('../shopify/shopify_json/{}'.format(infile), 'Ur') as f:
+def shopify_translater(infile, outfile):
+    global notfound
+    with open('{}'.format(infile), 'Ur') as f:
         data = json.load(f)
         manufacturer_products = {
             shopify_translate(value)['Variant SKU'] : shopify_translate(value)
             for key,value in data.items()
         }
     if op_infile:
-        op_products = optimus_products()
+        op_products = optimus_translate()
+    else:
+        op_products = {}
     products = merger(manufacturer_products, op_products)
-    with open("../shopify/{}".format(outfile), "w") as output:
+    with open("{}".format(outfile), "w") as output:
         writer = csv.DictWriter(output, fieldnames=SHOPIFY_HEADERS)
         writer.writeheader()
         for k,product in products.items():
             writer.writerow({k:unicode(v).encode("utf-8") for k,v in product.items()})
+    for i in notfound:
+        print '"'+i+'":"",'
 
 def merger(mproducts, opproducts):
+    noimages = 0
     for k, v in opproducts.items():
         opp = opproducts[k]
         try:
@@ -38,36 +46,42 @@ def merger(mproducts, opproducts):
             for key in opp.keys():
                 if key == 'Tags':
                     mp[key] += "," + opp[key]
-                    mptags = mp[key].split(',')
-                    opptags = opp[key].split(',')
-                    for mptag in mptags:
-                        strmptag = str(mptag)
-                        if not strmptag in opptags:
-                            opptags.append(strmptag)
-                    mp[key] = ','.join(opptags)
-                    if mp[key][0] == ',':
-                        mp[key] = mp[key][1:]
-                        continue
+                    mp[key] = _clean_tags(mp[key])
                     continue
                 elif key == "Handle" and mp[key]:
                     continue
                 elif key == 'Variant Barcode':
                     continue
-                elif key == 'Variant Price' and mp[key]:
+                elif key == 'Variant Price':
                     continue
+                elif key == 'Image Src':
+                    notempty = [opp[key] is not "", opp[key]]
+                    if 'no-image' in mp['Tags'] and all(notempty):
+                        opp['Tags'] = opp['Tags'].replace(',no-image', '')
+                        mp['Tags'] = mp['Tags'].replace(',no-image', '')
+                        mp['Tags'] += ',has-image'
+                        opp['Tags'] += ',has-image'
+                        mp['Tags'] = _clean_tags(mp['Tags'])
                 mp[key] = opp[key]
         except:
             mproducts[k] = opproducts[k]
+            img = mproducts[k]['Image Src']
+            if img == "" or not img:
+                noimages += 1
+                mproducts[k]['Tags'] += ",no-image"
+            else:
+                mproducts[k]['Tags'] += ",has-image"
+    print noimages
     return mproducts
 
-
-def optimus_products():
+def optimus_translate():
     op_products = {}
     with open('{}'.format(op_infile), 'Ur') as f:
         data = json.load(f)
         for datum in data:
             for part in datum['parts']:
-                oem = part['oem']
+                oem = part.get('oem')
+                part_number = part.get('part_number')
                 if not oem:
                     #print('No part number for: {}'.format(part))
                     continue
@@ -78,7 +92,7 @@ def optimus_products():
                     title = oem + " - For - " + datum['title']
                 category = datum['category']
                 main_title = str(datum['title'])
-                category, tags = type_n_tags(category, title)
+                category, tags = _type_n_tags(category, title)
                 manufacturer = get_manufacturer(part['manufacturer'])
                 description = part.get('description', oem)
                 handle = manufacturer + " " + oem
@@ -90,9 +104,11 @@ def optimus_products():
                 product['Published'] = True
                 product['Handle'] = handle
                 product['Type'] = category
-                product['Tags'] = tags + ',' + manufacturer.lower()
-                product['Option1 Name'] = "Part Number"
-                product['Option1 Value'] = oem
+                tags += ',{},part'.format(manufacturer.lower())
+
+                if oem:
+                    product['Option1 Name'] = "Part Number"
+                    product['Option1 Value'] = oem
                 #product['Option2 Name'] = "Fits Model"
                 #product['Option2 Value'] = datum['title']
                 # SEO definitions
@@ -110,36 +126,155 @@ def optimus_products():
                     product['Image Src'] = part['image_urls'][0]
                     product['Image Alt Text'] = sku
                 except:
-                    pass
+                    product['Tags'] += ',no-image'
+                product['Tags'] = _clean_tags(tags)
                 op_products[product['Variant SKU']] = product
     return op_products
 
-def get_manufacturer(manufacturer):
-    ms = [
-        'Oreq', 'Aquachek', 'GAME', 'Unicel', 'Val-Pak', 'U.S. SEAL',
-        'Aladddin', 'Waterway', 'Zodiac', 'Pentair', 'Hayward'
+
+def shopify_translate(line):
+    """ This simply translates a product from the SCP template to
+    the Shopify template.
+    """
+    product = shopify_template()
+    # Define and get variables
+    manufacturer = get_manufacturer(line.get('manufacturer'))
+    category = str(line.get('category'))
+    # Make sure the upc is just numerical values.
+    upc = clean_upc(str(line.get('upc')))
+    # part_number is either the manufacturers part number or the upc.
+    part_number = str(line.get('part_number')) #get_part_number(line)
+    sku = create_sku(manufacturer, part_number)
+    title = str(line.get('title'))
+    seo_title = manufacturer + " - " + title
+    handle = manufacturer + " " + part_number
+    description = make_description(
+        title,
+        line.get('long_description')
+    )
+    # Product defintions
+    product['Vendor'] = manufacturer
+    if part_number not in title:
+        product['Title'] = title + ' - ' + part_number
+    else:
+        product['Title'] = title
+    product['Published'] = True
+    category, tags = _type_n_tags(category, title)
+    if not (category and tags):
+        alt_category, alt_tags = _type_n_tags(line.get('subcategory'), title)
+    if not category and alt_category:
+        category = alt_category
+    if not tags and alt_tags:
+        tags = tags +','+alt_tags
+    product['Handle'] = handle
+    product['Type'] = category
+    tags +=  ",{0},no-image,".format(manufacturer.lower())
+    product['Tags'] = _clean_tags(tags)
+    product['Variant Inventory Policy'] = "deny"
+    product['Variant Fulfillment Service'] = "manual"
+    # SEO definitions
+    print(description, title)
+    product['SEO Description'] = description
+    product['SEO Title'] = product['Title']
+    # Variant definitions
+    product['Variant SKU'] = sku
+    product['Variant Inventory Tracker'] = "shopify"
+    product['Variant Price'] = make_price(line['price'])
+    if product['Variant Price']:
+        product['Variant Inventory Qty'] = 5
+    else:
+        product['Variant Inventory Qty'] = 0
+    product['Variant Requires Shipping'] = True
+    product['Variant Barcode'] = upc
+    # Image definitions - Image Src is required if Alt is given
+    #product['Image Src'] = make_image_location('valpakpics', sku)
+    #product['Image Alt Text'] = sku
+    # Google Shopping
+    # product['Google Shopping / Age Group'] = "Adult"
+    # product['Google Shopping / Gender'] = "Unisex"
+    # product['Google Shopping / Condition'] = "new"
+    # Optional fields
+    try:
+        product['Option1 Name'] = "Part Number"
+        product['Option1 Value'] = part_number
+    except:
+        product['Option1 Name'] = "Title"
+        product['Option1 Value'] = "Default Title"
+    try:
+        product['Option2 Name'] = line['option_two_name']
+        product['Option2 Value'] = line['option_two_value']
+    except:
+        # no option two (optional)
+        pass
+    return product
+
+def _clean_tags(tags):
+    equipment = [
+        'equipment' in tags,
+        'wholegood' in tags,
+        'unit' in tags
     ]
-    for m in ms:
-        if m in manufacturer:
-            return m
-    return manufacturer
+    if 'part' in tags and any(equipment):
+        tags = tags.replace('part', '')
+    taglist = tags.split(',')
+    cleanlist = []
+    for tag in taglist:
+        strtag = str(tag).lower()
+        if strtag and not(strtag in cleanlist):
+            cleanlist.append(strtag)
+    cleanstr = ','.join(cleanlist)
+    return cleanstr
 
-def type_n_tags(key, title=None):
-    key = str(key.replace('| ', '').replace(' -', ','))
-    possible_categories = _CATEGORIES[key]
-    cats = possible_categories.split(',')
-    for cat in cats:
-        cat = cat.lstrip()
-        try:
-            tags = TNT[cat]
-            tags = gettags(key, possible_categories, tags, title)
-            return cat, tags
-        except:
-            pass
-    print("No type or tags for: {}".format(key))
-    return None, None
+def _type_n_tags(key, title=None):
+    global notfound
+    try:
+        key = str(key.replace('| ', '').replace(' -', ','))
+        possible_categories = _CATEGORIES.get(key)
 
-def gettags(key, categories, tags, title=None):
+        cats = possible_categories.split(',')
+        for cat in cats:
+            cat = cat.lstrip()
+            try:
+                tags = TNT.get(cat)
+                tags = _gettags(key, possible_categories, tags, title)
+                return cat, tags
+            except:
+                pass
+    except:
+        pass
+    if key:
+        if key not in notfound:
+            notfound.append(key)
+        print("No type or tags for: {}".format(key))
+    return "Accessories", "part,no-cat,"
+
+def _bestguess_type(title):
+    keywords = {
+        "Pumps": ["Pump", "HP", "Pump", "Trap", 'Lid'],
+        "O-Rings & Gaskets": [
+            'oring', 'O-Ring', 'Oring',
+            'O-ring', 'Oring', 'ORing',
+            'gasket', 'Gasket'
+        ]
+    }
+    type_score = {}
+    for k, values in keywords.items():
+        type_score[k] = 0
+        for value in values:
+            if value in title:
+                if k == "Pumps":
+                    type_score[k] += 5
+                else:
+                    type_score[k] += 10
+    bestguess_type = max(type_score, key=type_score.get)
+    if type_score[bestguess_type] == 0:
+        return None
+    return bestguess_type
+
+
+
+
+def _gettags(key, categories, tags, title=None):
     product_tags = ""
     lkey = key.lower()
     lcategories = categories.lower()
@@ -165,92 +300,23 @@ def gettags(key, categories, tags, title=None):
 
     return product_tags if product_tags else key
 
-def shopify_translate(line):
-    """ This simply translates a product from the SCP template to
-    the Shopify template.
-    """
-    product = shopify_template()
-    # Define and get variables
-    manufacturer = line['manufacturer']
-    category = line['category']
-    # Make sure the upc is just numerical values.
-    upc = clean_upc(line['upc'])
-    # part_number is either the manufacturers part number or the upc.
-    part_number = get_part_number(line)
-    sku = create_sku(manufacturer, part_number)
-    title = line['title']
-    seo_title = manufacturer + " - " + title
-    handle = manufacturer + " " + part_number
-    description = make_description(
-        title,
-        line['long_description'],
-        {'Instructions': line['instructions'], 'Warranty': line['warranty']}
-    )
-    # Product defintions
-    product['Vendor'] = line['manufacturer']
-    product['Title'] = title
-    product['Published'] = True
-    category, tags = type_n_tags(line['category'], title)
-    if not (category and tags):
-        alt_category, alt_tags = type_n_tags(line['subcategory'], title)
-    if not category and alt_category:
-        category = alt_category
-    if not tags and alt_tags:
-        tags = tags +','+alt_tags
-    product['Handle'] = handle
-    product['Type'] = category
-    product['Tags'] = tags + ',' + manufacturer.lower()
-    product['Variant Inventory Policy'] = "deny"
-    product['Variant Fulfillment Service'] = "manual"
-    # SEO definitions
-    product['SEO Description'] = title + " " + description
-    product['SEO Title'] = title
-    # Variant definitions
-    product['Variant SKU'] = sku
-    product['Variant Inventory Tracker'] = "shopify"
-    product['Variant Inventory Qty'] = 2
-    product['Variant Price'] = make_price(line['price'])
-    product['Variant Requires Shipping'] = True
-    product['Variant Barcode'] = upc
-    # Image definitions - Image Src is required if Alt is given
-    #product['Image Src'] = make_image_location(sku)
-    #product['Image Alt Text'] = sku
-    # Google Shopping
-    # product['Google Shopping / Age Group'] = "Adult"
-    # product['Google Shopping / Gender'] = "Unisex"
-    # product['Google Shopping / Condition'] = "new"
-    # Optional fields
-    try:
-        product['Option1 Name'] = line['option_one_name']
-        product['Option1 Value'] = line['option_one_value']
-    except:
-        product['Option1 Name'] = "Title"
-        product['Option1 Value'] = "Default Title"
-    try:
-        product['Option2 Name'] = line['option_two_name']
-        product['Option2 Value'] = line['option_two_value']
-    except:
-        # no option two (optional)
-        pass
-    return product
 
 def shopify_template():
     return deepcopy(SHOPIFY_TEMPLATE)
 
-
-
-def get_part_number(line):
+def get_part_number(part):
     try:
         #val-pak specific: they have two part numbers for some products
         # one is the actual part number
         # and the other has an S to specify a single uom for ordering.
-        part_number = clean_part_number(line['part_number'])
+        part_number = clean_part_number(part['part_number'])
     except:
         print("Part Number wasn't found. Using upc instead")
-        part_number = clean_upc(line['upc'])
+        part_number = clean_upc(part['upc'])
     return part_number
 
 def make_description(title, description, otherinfo=None):
+    description = str(description)
     if title and description:
         full_description = title + ".\n"  + description
     elif title:
@@ -263,26 +329,37 @@ def make_description(title, description, otherinfo=None):
         for k,v in otherinfo.items():
             try:
                 full_description += "\n"
-                full_description += k + "\n"
-                full_description += v
+                full_description += str(k) + "\n"
+                full_description += str(v)
             except:
                 continue
     return full_description
 
 
-def make_image_location(name):
-    return 'https://s3-us-west-1.amazonaws.com/shopifyimportimages/' \
-        + name + ".jpg"
+def make_image_location(bucket, name):
+    return 'https://s3-us-west-1.amazonaws.com/{0}/{1}.jpg'.format(
+        bucket, name
+    )
 
-def make_price(cost):
-    cost = float(cost.replace('$','').replace(',',''))
-    if cost:
+def make_price1(cost):
+    try:
+        cost = float(cost.replace('$','').replace(',',''))
         global multiplier
-        return round((cost + (cost * multiplier)), 2)
+        cost = round((cost + (cost * multiplier) + 1.00), 2)
+    except:
+        print("Didn't make price")
+        pass
     return cost
 
 def create_sku(manufacturer, part_number):
-    return manufacturer[:3].upper() + "_" + part_number
+    cmanufacturer = manufacturer.replace(
+        '.',''
+    ).replace(
+        '-', ''
+    ).replace(
+        ' ', ''
+    )
+    return cmanufacturer[:3].upper() + "_" + part_number
 
 def clean_part_number(part_number):
     """ This is used to clean part numbers."""
@@ -308,4 +385,4 @@ def count():
 
 
 if __name__ == "__main__":
-    shopify_converter(infile, outfile)
+    shopify_translater(infile, outfile)

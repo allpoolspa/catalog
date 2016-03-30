@@ -1,0 +1,15 @@
+sku	product-id	product-id-type	price	minimum-seller-allowed-price	maximum-seller-allowed-price	item-condition	quantity	add-delete	will-ship-internationally	expedited-shipping	standard-plus	item-note	fulfillment-center-id	product-tax-code	leadtime-to-ship	merchant_shipping_group_name
+ODY_910	090045009106	3	135.4	121.0	183.4	11	0	a							30	
+ODY_900	090045009007	3	246.0	219.75	333.5	11	0	a							30	
+ODY_915	090045009151	3	289.4	258.5	392.4	11	0	a							30	
+ODY_918	090045009182	3	107.4	96.0	145.4	11	0	a							30	
+ODY_101	090045101190	3	37.4	33.5	50.4	11	0	a							30	
+ODY_102	090045102197	3	23.4	21.0	31.4	11	0	a							30	
+ODY_929	090045009298	3	99.0	88.5	134.0	11	0	a							30	
+ODY_928	090045009281	3	149.4	133.5	202.4	11	0	a							30	
+ODY_945	090045009458	3	275.4	246.0	373.4	11	0	a							30	
+ODY_024	090045000240	3	94.34	84.34	127.67	11	0	a							30	
+ODY_934	090045009341	3	243.2	217.25	329.7	11	0	a							30	
+ODY_935	090045009353	3	113.0	101.0	153.0	11	0	a							30	
+ODY_950	090045009502	3	286.6	256.0	388.6	11	0	a							30	
+ODY_924	090045009243	3	132.6	118.5	179.6	11	0	a							30	

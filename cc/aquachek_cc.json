@@ -1,0 +1,408 @@
+{
+    "2770120": {
+        "category": "Test Strips", 
+        "part_number": "2770120", 
+        "price": 25.2, 
+        "title": "pH Singlet - 20 per pack", 
+        "vendor": "HACH CO"
+    }, 
+    "2771520": {
+        "category": "Test Strips", 
+        "part_number": "2771520", 
+        "price": 36.2, 
+        "title": "mS Conductivity Singlet 20 per pack", 
+        "vendor": "HACH CO"
+    }, 
+    "502149": {
+        "category": "Test Strips", 
+        "part_number": "502149", 
+        "price": 233.46, 
+        "title": "TruTest Digital Test Strip Reader Starter Kit, Strip Qty 25,", 
+        "vendor": "HACH CO"
+    }, 
+    "511242A": {
+        "category": "Test Strips", 
+        "part_number": "511242A", 
+        "price": 43.32, 
+        "title": "Yellow 4-in-1, Strip Qty 50, Display 12PK", 
+        "vendor": "HACH CO"
+    }, 
+    "511244A": {
+        "category": "Test Strips", 
+        "part_number": "511244A", 
+        "price": 545.6, 
+        "title": "Yellow 4-in-1, Strip Qty 50, Bulk 160 Box", 
+        "vendor": "HACH CO"
+    }, 
+    "512084": {
+        "category": "Test Strips", 
+        "part_number": "512084", 
+        "price": 29.22, 
+        "title": "Pro II 4-in-1 (ENG), Strip Qty 25, Pack Qty 6", 
+        "vendor": "HACH CO"
+    }, 
+    "512109": {
+        "category": "Test Strips", 
+        "part_number": "512109", 
+        "price": 545.6, 
+        "title": "Yellow 4-in-1, Strip Qty 50, Bulk 160 Box (Canadian Consumer Product)", 
+        "vendor": "HACH CO"
+    }, 
+    "512138": {
+        "category": "Test Strips", 
+        "part_number": "512138", 
+        "price": 42.18, 
+        "title": "TruTest Value Pack Test Strips, Strip Qty 100, 6 PK", 
+        "vendor": "HACH CO"
+    }, 
+    "512232": {
+        "category": "Test Strips", 
+        "part_number": "512232", 
+        "price": 58.8, 
+        "title": "Copper 3-in-1 Test Strips, Strip Qty 25, Display 12 PK", 
+        "vendor": "HACH CO"
+    }, 
+    "512254": {
+        "category": "Test Strips", 
+        "part_number": "512254", 
+        "price": 24.6, 
+        "title": "ShockChek Pool & Spa Test Strips ***SCP ONLY", 
+        "vendor": "HACH CO"
+    }, 
+    "521252A": {
+        "category": "Test Strips", 
+        "part_number": "521252A", 
+        "price": 45.72, 
+        "title": "Red 4-In-1, Strip Qty 50, Display 12 PK", 
+        "vendor": "HACH CO"
+    }, 
+    "521253A": {
+        "category": "Test Strips", 
+        "part_number": "521253A", 
+        "price": 574.4, 
+        "title": "Red 4-In-1, Strip Qty 50, Bulk 160 Box", 
+        "vendor": "HACH CO"
+    }, 
+    "522106": {
+        "category": "Test Strips", 
+        "part_number": "522106", 
+        "price": 45.72, 
+        "title": "Red 4-In-1, Strip Qty 50, Display 12 PK (Canadian Consumer Product)", 
+        "vendor": "HACH CO"
+    }, 
+    "522110": {
+        "category": "Test Strips", 
+        "part_number": "522110", 
+        "price": 574.4, 
+        "title": "Red 4-In-1, Strip Qty 50, Bulk 160 Box (Canadian Consumer Product)", 
+        "vendor": "HACH CO"
+    }, 
+    "532105": {
+        "category": "Test Strips", 
+        "part_number": "532105", 
+        "price": 43.32, 
+        "title": "Yellow 4-in-1, Strip Qty 50, Display 12 PK (Canadian Consumer Product)", 
+        "vendor": "HACH CO"
+    }, 
+    "541604A": {
+        "category": "Test Strips", 
+        "part_number": "541604A", 
+        "price": 50.82, 
+        "title": "7-in-1 Kit, Strip Qty 50, Display 6 PK", 
+        "vendor": "HACH CO"
+    }, 
+    "541640A": {
+        "category": "Test Strips", 
+        "part_number": "541640A", 
+        "price": 32.46, 
+        "title": "7-in-1 Refill, Strip Qty 50, Display 6 PK", 
+        "vendor": "HACH CO"
+    }, 
+    "542228A": {
+        "category": "Test Strips", 
+        "part_number": "542228A", 
+        "price": 65.28, 
+        "title": "Salt System Test Kit, Strip Qty 10/25, Display 12 PK", 
+        "vendor": "HACH CO"
+    }, 
+    "551236": {
+        "category": "Test Strips", 
+        "part_number": "551236", 
+        "price": 59.7, 
+        "title": "Silver 7-in-1 (ENG), Strip Qty 100, Pack Qty 6", 
+        "vendor": "HACH CO"
+    }, 
+    "552244": {
+        "category": "Test Strips", 
+        "part_number": "552244", 
+        "price": 49.68, 
+        "title": "Spa 6-in-1 Test Strips, Strip Qty 50, Display 12 PK", 
+        "vendor": "HACH CO"
+    }, 
+    "561140A": {
+        "category": "Test Strips", 
+        "part_number": "561140A", 
+        "price": 54.96, 
+        "title": "White Salt Titrators, Strip Qty 10, Display 12 PK", 
+        "vendor": "HACH CO"
+    }, 
+    "561141A": {
+        "category": "Test Strips", 
+        "part_number": "561141A", 
+        "price": 713.6, 
+        "title": "White Salt Titrators, Strip Qty 10, Bulk 160 Box", 
+        "vendor": "HACH CO"
+    }, 
+    "561161": {
+        "category": "Test Strips", 
+        "part_number": "561161", 
+        "price": 77.94, 
+        "title": "White Salt Titrators, Strip Qty 40, Pack Qty 6", 
+        "vendor": "HACH CO"
+    }, 
+    "561219": {
+        "category": "Test Strips", 
+        "part_number": "561219", 
+        "price": 22.08, 
+        "title": "Cyanuric Acid (ENG), Strip Qty 25, Pack Qty 6", 
+        "vendor": "HACH CO"
+    }, 
+    "561220": {
+        "category": "Test Strips", 
+        "part_number": "561220", 
+        "price": 22.08, 
+        "title": "Total Hardness, Strip Qty 25, Pack Qty 6", 
+        "vendor": "HACH CO"
+    }, 
+    "561625A": {
+        "category": "Test Strips", 
+        "part_number": "561625A", 
+        "price": 56.88, 
+        "title": "Blue 3-in-1 (Biguanide) Test Strips, Strip Qty 25, Display 12 PK", 
+        "vendor": "HACH CO"
+    }, 
+    "561627A": {
+        "category": "Test Strips", 
+        "part_number": "561627A", 
+        "price": 723.2, 
+        "title": "Blue 3-in-1 (Biguanide) Test Strips, Strip Qty 25, Bulk 160 PK", 
+        "vendor": "HACH CO"
+    }, 
+    "561682A": {
+        "category": "Test Strips", 
+        "part_number": "561682A", 
+        "price": 48.24, 
+        "title": "MPS 3-in-1 (Monopersulfate) Test Strips, Strip Qty 50, Display 12 PK", 
+        "vendor": "HACH CO"
+    }, 
+    "561683": {
+        "category": "Test Strips", 
+        "part_number": "561683", 
+        "price": 22.08, 
+        "title": "TDS Test Strips, Strip Qty 25, Pack Qty 6", 
+        "vendor": "HACH CO"
+    }, 
+    "562012": {
+        "category": "Test Strips", 
+        "part_number": "562012", 
+        "price": 28.38, 
+        "title": "Borate Test Strips, Strip Qty 25, Pack Qty 6", 
+        "vendor": "HACH CO"
+    }, 
+    "562053": {
+        "category": "Test Strips", 
+        "part_number": "562053", 
+        "price": 25.2, 
+        "title": "Sodium Bromide, Strip Qty 10, Pack Qty 6", 
+        "vendor": "HACH CO"
+    }, 
+    "562107": {
+        "category": "Test Strips", 
+        "part_number": "562107", 
+        "price": 54.96, 
+        "title": "White , Strip Qty 10, Display 12 PK", 
+        "vendor": "HACH CO"
+    }, 
+    "562111": {
+        "category": "Test Strips", 
+        "part_number": "562111", 
+        "price": 713.6, 
+        "title": "White Salt Titrators, Strip Qty 10, Bulk 160 Box", 
+        "vendor": "HACH CO"
+    }, 
+    "562227": {
+        "category": "Test Strips", 
+        "part_number": "562227", 
+        "price": 17.34, 
+        "title": "One Minute Phosphate, Strip Qty 20, Pack Qty 6", 
+        "vendor": "HACH CO"
+    }, 
+    "562249": {
+        "category": "Test Strips", 
+        "part_number": "562249", 
+        "price": 46.44, 
+        "title": "Peroxide 3-in-1 Test Strips, Strip Qty 25, Display 12 PK", 
+        "vendor": "HACH CO"
+    }, 
+    "571850": {
+        "category": "Test Strips", 
+        "part_number": "571850", 
+        "price": 29.58, 
+        "title": "Ammonia Test Strips, Strip Qty 25, Pack Qty 6", 
+        "vendor": "HACH CO"
+    }, 
+    "571851": {
+        "category": "Test Strips", 
+        "part_number": "571851", 
+        "price": 31.5, 
+        "title": "4-Way Test Strips , Strip Qty 25, Pack Qty 6", 
+        "vendor": "HACH CO"
+    }, 
+    "641426E": {
+        "category": "Test Strips", 
+        "part_number": "641426E", 
+        "price": 25.2, 
+        "title": "Nitrite/Nitrate Test Strips, Strip Qty 25, Pack Qty 6", 
+        "vendor": "HACH CO"
+    }, 
+    "652013": {
+        "category": "Test Strips", 
+        "part_number": "652013", 
+        "price": 31.5, 
+        "title": "High Range Free Chlorine (EN/ES/FR), Strip Qty 100, Pack Qty 6", 
+        "vendor": "HACH CO"
+    }, 
+    "661454E": {
+        "category": "Test Strips", 
+        "part_number": "661454E", 
+        "price": 28.38, 
+        "title": "Copper Test Strips, Strip Qty 25, Pack Qty 6", 
+        "vendor": "HACH CO"
+    }, 
+    "661455E": {
+        "category": "Test Strips", 
+        "part_number": "661455E", 
+        "price": 69.36, 
+        "title": "Iron Test Strips, Strip Qty 25, Pack Qty 6", 
+        "vendor": "HACH CO"
+    }, 
+    "9531000E": {
+        "category": "Test Strips", 
+        "part_number": "9531000E", 
+        "price": 47.25, 
+        "title": "Pocket Pro pH Tester", 
+        "vendor": "HACH CO"
+    }, 
+    "9531100E": {
+        "category": "Test Strips", 
+        "part_number": "9531100E", 
+        "price": 63.0, 
+        "title": "Pocket Pro ORP Tester", 
+        "vendor": "HACH CO"
+    }, 
+    "9531200E": {
+        "category": "Test Strips", 
+        "part_number": "9531200E", 
+        "price": 47.25, 
+        "title": "Pocket Pro TDS Low Range Tester", 
+        "vendor": "HACH CO"
+    }, 
+    "9531300E": {
+        "category": "Test Strips", 
+        "part_number": "9531300E", 
+        "price": 47.25, 
+        "title": "Pocket Pro TDS High Range Tester", 
+        "vendor": "HACH CO"
+    }, 
+    "9531400E": {
+        "category": "Test Strips", 
+        "part_number": "9531400E", 
+        "price": 68.25, 
+        "title": "Pocket Pro Conductivity Low Range Tester", 
+        "vendor": "HACH CO"
+    }, 
+    "9531500E": {
+        "category": "Test Strips", 
+        "part_number": "9531500E", 
+        "price": 68.25, 
+        "title": "Pocket Pro Conductivity High Range Tester", 
+        "vendor": "HACH CO"
+    }, 
+    "9531600E": {
+        "category": "Test Strips", 
+        "part_number": "9531600E", 
+        "price": 57.75, 
+        "title": "Pocket Pro Salinity", 
+        "vendor": "HACH CO"
+    }, 
+    "9531700E": {
+        "category": "Test Strips", 
+        "part_number": "9531700E", 
+        "price": 63.0, 
+        "title": "Pocket Pro Temp Tester", 
+        "vendor": "HACH CO"
+    }, 
+    "9531701E": {
+        "category": "Test Strips", 
+        "part_number": "9531701E", 
+        "price": 26.25, 
+        "title": "Meter Replacement Sensor", 
+        "vendor": "HACH CO"
+    }, 
+    "9532000E": {
+        "category": "Test Strips", 
+        "part_number": "9532000E", 
+        "price": 73.5, 
+        "title": "Pocket Pro + pH Tester", 
+        "vendor": "HACH CO"
+    }, 
+    "9532001E": {
+        "category": "Test Strips", 
+        "part_number": "9532001E", 
+        "price": 70.35, 
+        "title": "Meter Replacement Sensor", 
+        "vendor": "HACH CO"
+    }, 
+    "9532100E": {
+        "category": "Test Strips", 
+        "part_number": "9532100E", 
+        "price": 126.0, 
+        "title": "Pocket Pro + ORP Tester", 
+        "vendor": "HACH CO"
+    }, 
+    "9532101E": {
+        "category": "Test Strips", 
+        "part_number": "9532101E", 
+        "price": 124.95, 
+        "title": "Meter Replacement Sensor", 
+        "vendor": "HACH CO"
+    }, 
+    "9532700E": {
+        "category": "Test Strips", 
+        "part_number": "9532700E", 
+        "price": 73.5, 
+        "title": "Pocket Pro + Cond/Salt/TDS Tester", 
+        "vendor": "HACH CO"
+    }, 
+    "9532701E": {
+        "category": "Test Strips", 
+        "part_number": "9532701E", 
+        "price": 70.35, 
+        "title": "Meter Replacement Sensor", 
+        "vendor": "HACH CO"
+    }, 
+    "9532800E": {
+        "category": "Test Strips", 
+        "part_number": "9532800E", 
+        "price": 136.5, 
+        "title": "Pocket Pro + pH/Cond/Salt/TDS Tester", 
+        "vendor": "HACH CO"
+    }, 
+    "9532801E": {
+        "category": "Test Strips", 
+        "part_number": "9532801E", 
+        "price": 81.9, 
+        "title": "Meter Replacement Sensor", 
+        "vendor": "HACH CO"
+    }
+}

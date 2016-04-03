@@ -2,17 +2,13 @@
 import re
 import json
 import csv
+import math
 from copy import deepcopy
-from templates import APS_TEMPLATE, SHOPIFY_TEMPLATE
 from amazon_variables import CATEGORY_INVENTORY_FILE, INVENTORY_LOADER
 from aps_categories import (_CLEANCATS, TYPES_N_TAGS as TNT)
-from scripts import (
-    clean_cost,
-    make_price,
-    make_sku,
-    get_manufacturer,
-    shopify_handle
-)
+from scripts import *
+from templates import *
+from fba_inventory import FBA, ERRORS
 
 class FileMaker(object):
 
@@ -42,6 +38,7 @@ class FileMaker(object):
 
     def json(self, infile):
         try:
+            print infile
             with open(infile, 'Ur') as f:
                 lines = json.load(f, encoding="ascii")
                 for line in lines:
@@ -159,8 +156,8 @@ class FileMaker(object):
         self._outfile_ext = value
 
 
-
 class ApsFileMaker(FileMaker):
+
 
     scp = "_scp"
     cc = "_cc"
@@ -198,7 +195,7 @@ class ApsFileMaker(FileMaker):
         if not curr_product.get('list_price') and product.get('list_price'):
             curr_product['list_price'] = product.get('list_price')
         if not curr_product.get('cost'):
-            curr_product['cost'] = product.get('price')
+            curr_product['cost'] = product.get('price', product.get('cost'))
         if not curr_product.get('upc'):
             curr_product['upc'] = product.get('upc')
 
@@ -248,6 +245,23 @@ class ApsFileMaker(FileMaker):
             curr_product['optimus_sku'] = product.get('optimus_sku')
             curr_product['optimus_category'] = wholegood.get('category')
 
+    def manufacturer_import(self, product):
+        """Import products from val-pakproducts.com"""
+        if not self.sku(product):
+            print product
+            return;
+        curr_product = self.current_product(product)
+        self.common_keys(curr_product, product)
+        curr_product['manufacturer_category'] = product.get('category')
+        curr_product['original_manufacturer'] = product.get('original_manufacturer')
+        curr_product['country'] = product.get('country')
+        curr_product['manufacturer'] = "Val-Pak"
+        try:
+            curr_product['image_url'] = product.get('image_urls')[0]
+        except:
+            pass
+
+
     def import_handler(self):
         """Takes in a list of files and distributes them out to
         the read_handler() along with the appropriate import()
@@ -267,7 +281,7 @@ class ApsFileMaker(FileMaker):
                     adding one of the following:
                     \n{0}\n{1}\n{2}\n{3}\n
                     to the file name
-                    """.format(scp, cc, opt, manufacturer)
+                    """.format(self.scp, self.cc, self.opt, self.man)
                 )
 
     def read_handler(self, infile, func):
@@ -285,18 +299,27 @@ class ApsFileMaker(FileMaker):
         else:
             print("incompatible file type: {}".format(ifnile))
 
-
     def finalize(self):
         for key in self.products.keys():
             # remove all unicode objects
             # and convert everything into strings
             product = self.products[key]
             #self.string_conversion(product)
-
+            product['fulfillment'] = self.fba(product)
+            product['asin'] = self.asin(product)
             product['cost'] = self.cost(product.get('cost'))
             product['list_price'] = self.cost(product.get('list_price'))
             product['scp_cost'] = self.cost(product.get('scp_cost'))
             product['optimus_cost'] = self.cost(product.get('optimus_cost'))
+            if product.get('image_url'):
+                sku = product.get('sku')
+                abbr = sku.split('_')[0]
+                product['image_url'] = self.image_url(
+                    abbr,
+                    sku,
+                    manufacturer=product.get('manufacturer')
+                )
+            #print product['image_url']
             self.type_handler(product)
             self.manufacturer(product)
             self.clean_title(product)
@@ -305,10 +328,59 @@ class ApsFileMaker(FileMaker):
             product['discontinued'] = self.discontinued(
                 product.get('title', False)
             )
-
-
+            if (
+                product['obsolete']
+                or product['discontinued']
+                or not(product['cost'])
+            ):
+                product['available'] = False
 
     # Helper functions
+    def asin(self, product):
+        sku = product.get('sku')
+        part_number = product.get('part_number')
+        try:
+            clean_pn = part_number.replace('-','')
+        except:
+            clean_pn = ""
+        return FBA.get(
+            sku,
+            FBA.get(
+                part_number,
+                FBA.get(clean_pn)
+            )
+        )
+
+    def fba(self, product):
+        sku = product.get('sku')
+        part_number = product.get('part_number')
+        try:
+            clean_pn = part_number.replace('-','')
+        except:
+            clean_pn = ""
+        if FBA.get(sku) or FBA.get(part_number) or FBA.get(clean_pn):
+            return "AMAZON_NA"
+        else:
+            return ""
+
+    def image_url(self, bucket, name, manufacturer=None):
+
+        if "val-pak" in manufacturer.lower():
+            return 'https://s3-us-west-1.amazonaws.com/valpakpics/{0}.jpg'.format(
+                name
+            )
+        elif "raypak" in manufacturer.lower():
+            part_number = name.split('_')[1]
+            img = 'https://s3-us-west-1.amazonaws.com/oppics/full/{0}/{0}_{1}.jpg'.format(
+                "Raypak",
+                part_number
+            )
+            return img
+        else:
+            return 'https://s3-us-west-1.amazonaws.com/oppics/full/{0}/{1}.jpg'.format(
+                bucket,
+                name
+            )
 
     def string_conversion(self, product):
         for k, v in product.items():
@@ -322,7 +394,6 @@ class ApsFileMaker(FileMaker):
                 if not(isinstance(v, int) or isinstance(v, type(None))):
                     print("Failed string conversion value: ", v)
             product[k] = v
-
 
     def obsolete(self, product):
         obsolete = product.get('obsolete')
@@ -341,7 +412,10 @@ class ApsFileMaker(FileMaker):
         return False
 
     def discontinued(self, title):
-        if "discontinued" in title.lower():
+        ltitle = title.lower()
+        if "no longer available" in ltitle:
+            return True
+        if "discontinued" in ltitle:
             return True
         return False
 
@@ -349,7 +423,6 @@ class ApsFileMaker(FileMaker):
         manufacturer = product.get('manufacturer')
         part_number = product.get('part_number')
         product['product_handle'] = "{0} {1}".format(manufacturer, part_number)
-
 
     def clean_title(self, product):
         part_number = product.get('part_number', '')
@@ -368,12 +441,15 @@ class ApsFileMaker(FileMaker):
                 pass
         product['title'] = title
 
-
     def sku(self, product):
         """All Porducts need a sku, which is an all pool spa unique identifier.
         If product['sku'] doesn't exist, try and make it.
         :return bool: True if sku exists or we can make one, else False.
         """
+        sku = product.get('sku')
+        if product.get('sku'):
+            product['sku'] = sku
+            return True
         try:
             manufacturer = get_manufacturer(
                 product.get(
@@ -400,7 +476,6 @@ class ApsFileMaker(FileMaker):
         except:
             return [None, None, None]
 
-
     def product_type(self, checklist):
         """products are either parts or wholegoods.
         Take a best guess that it either has the word 'Part' in it or
@@ -412,10 +487,17 @@ class ApsFileMaker(FileMaker):
             if not s:
                 continue
             ls = s.lower()
+            wholegood = [
+                'equipment' in ls,
+                'wholegood' in ls,
+                'unit' in ls
+            ]
             if "part" in ls or "replac" in ls:
                 return "part"
-            else:
+            elif any(wholegood):
                 return "wholegood"
+            else:
+                return "part"
 
     def pool_type(self, checklist):
         for s in checklist:
@@ -500,8 +582,7 @@ class ShopifyFileMaker(FileMaker):
         curr_product['Variant Price'] = make_price(product.get('cost'))
         img = product.get('image_url')
         if img:
-            abbr = sku[:3]
-            curr_product['Image Src'] = self.image_url(abbr, sku)
+            curr_product['Image Src'] = img
             curr_product['Image Alt Text'] = part_number
             tags += ',has-image'
 
@@ -519,14 +600,32 @@ class ShopifyFileMaker(FileMaker):
         curr_product['Variant Fulfillment Service'] = "manual"
         curr_product['Variant Inventory Tracker'] = "shopify"
         curr_product['Variant Requires Shipping'] = True
+        if category == 'Pumps' or category == 'Motors':
+            tags += self._pumps(product)
         curr_product['Tags'] = self._clean_tags(tags)
 
+    def _pumps(self, product):
+        title = product['title']
+        sku = product['sku']
+        pump_seals = [
+            'seal' in title.lower(),
+            'ps' in sku.lower(),
+        ]
+        capacitors = [
+            'mfd' in title.lower(),
+            'bc' in sku.lower(),
+        ]
+        manufacturer = ('US SEAL' == product['manufacturer'])
+        if any(pump_seals) and manufacturer:
+            return ',pump seal'
+        elif any(capacitors) and manufacturer:
+            return ',capacitor'
+        return ""
 
-    def image_url(self,bucket, name):
-        return 'https://s3-us-west-1.amazonaws.com/oppics/full/{0}/{1}.jpg'.format(
-            bucket,
-            name
-        )
+    def _get_keys(self,k):
+        if k.endswith('s'):
+            return k[:-1]
+        return k
 
     def _type_n_tags(self, product):
         category = product.get('category')
@@ -538,10 +637,18 @@ class ShopifyFileMaker(FileMaker):
         product_type = product.get('product_type')
         pool_type = product.get('pool_type')
         pool_or_spa = product.get('pool_or_spa')
-
+        manufacturer = product.get('manufacturer')
         items = [category, subcategory, op_category, scp_category, atype]
         try:
             for item in items:
+                keys = {k:self._get_keys(k) for k in TNT.keys()}
+                thetype = False
+                for k in keys.keys():
+                    if k in item or item in k or item in keys[k]:
+                        thetype = keys[k]
+                        break
+                if thetype:
+                    break
                 try:
                     item = item.encode('ascii')
                 except:
@@ -556,10 +663,14 @@ class ShopifyFileMaker(FileMaker):
                 elif _CLEANCATS.get(citem):
                     possible_categories = _CLEANCATS.get(citem)
                     break
-            cats = possible_categories.split(',')
+            if thetype:
+                cats = [thetype]
+            else:
+                cats = possible_categories.split(',')
             for cat in cats:
                 cat = str(cat.encode('ascii'))
                 cat = cat.lstrip()
+                print cat
                 try:
                     tags = TNT.get(cat)
                     tags = self._gettags(category, possible_categories, tags, title)
@@ -581,7 +692,16 @@ class ShopifyFileMaker(FileMaker):
                     atype
                 )
             )
-        return "Accessories", "no-cat,"
+        if manufacturer == 'US SEAL':
+            return "Pumps", ",part"
+        elif manufacturer == "Unicel":
+            return "Filters", ",part"
+        elif manufacturer == "Raypak":
+            return "Heaters", ""
+        elif manufacturer == "Odyssey":
+            return "Covers", ",accessory"
+        else:
+            return "Accessories", "no-cat,"
 
     def _gettags(self, key, categories, tags, title=""):
         product_tags = ""
@@ -627,6 +747,9 @@ class ShopifyFileMaker(FileMaker):
         ]
         if 'part' in tags and any(equipment):
             tags = tags.replace('part', '')
+            tags = tags.replace('unit', '')
+            tags = tags.replace('equipment', '')
+            tags += ",wholegood"
         taglist = tags.split(',')
         cleanlist = []
         for tag in taglist:
@@ -649,15 +772,28 @@ class AmazonFileMaker(FileMaker):
         )
         self._action = 'a'
         self._quantity = 0
-        self._id_type = 3
+        self._id_type = 3 #UPC, 1 is ASIN
         self._condition = 11
         self._leadtime = 30
         self._fba = False
+        self._fulfillment = "DEFAULT" #AMAZON_NA
 
 
     def start(self):
         for product in self.import_handler():
             self.aps_import(product)
+
+    def fba_price_adjustment(self, price):
+        try:
+            return max(math.ceil((price + (price*.4))), 5.99)
+        except:
+            print("Unable to adjust price".format(price))
+        return price
+
+    def fba(self, sku):
+        if FBA.get(sku):
+            return True
+        return False
 
     @property
     def action(self):
@@ -683,6 +819,11 @@ class AmazonFileMaker(FileMaker):
     def fba(self):
         return self._fba
 
+    @property
+    def fulfillment(self):
+        return self._fulfillment
+
+
     @action.setter
     def action(self, value):
         self._action = value
@@ -707,48 +848,63 @@ class AmazonFileMaker(FileMaker):
     def fba(self, value):
         self._fba = value
 
+    @fulfillment.setter
+    def fulfillment(self, value):
+        self._fulfillment = value
+
 class AmazonInventoryLoader(AmazonFileMaker):
 
 
     def aps_import(self, product):
         upc = product.get('upc')
         if not upc: return
+        sku = product.get('sku')
         curr_product = self.current_product(product)
         oem = product.get('oem')
         part_number = product.get('part_number')
-        sku = product.get('sku')
+        fulfillment = product.get('fulfillment', '')
         title = product.get('title')
         manufacturer = product.get('manufacturer')
         description = product.get('description')
         cost = product.get('cost')
         price = make_price(cost, .4)
+        asin = product.get('asin')
         minprice = make_price(cost, multiplier=.25)
-        maxprice = make_price(cost, multiplier=.90)
+        maxprice = make_price(price, multiplier=10)
         curr_product['sku'] = sku
-        curr_product['product-id'] = upc
         curr_product['product-id-type'] = self.id_type
+        curr_product['product-id'] = upc
         curr_product['price'] = price
         curr_product['minimum-seller-allowed-price'] = minprice
         curr_product['maximum-seller-allowed-price'] = maxprice
         curr_product['item-condition'] = self.condition
         curr_product['quantity'] = self.quantity
         curr_product['add-delete'] = self.action
-        curr_product['item-note'] = product.get('item-note', '')
-        curr_product['fulfillment-center-id'] = product.get(
-            'fulfillment-center-id',''
-        )
+        curr_product['fulfillment-center-id'] = fulfillment
         curr_product['leadtime-to-ship'] = self.leadtime
+        if fulfillment == "AMAZON_NA":
+            print sku, price
+            price = self.fba_price_adjustment(price)
+            curr_product['product-id-type'] = 1
+            curr_product['product-id'] = asin
+            curr_product['quantity'] = ""
+            curr_product['leadtime-to-ship'] = ""
+            print sku, price
+        curr_product['price'] = price
+
+
 
 class AmazonCategoryLoader(AmazonFileMaker):
 
 
     def aps_import(self, product):
         upc = product.get('upc')
+        sku = product.get('sku')
+        if self.filter_fba(sku): return
         if not upc: return
         curr_product = self.current_product(product)
         oem = product.get('oem')
         part_number = product.get('part_number')
-        sku = product.get('sku')
         title = product.get('title')
         manufacturer = product.get('manufacturer')
         description = product.get('description')
@@ -780,11 +936,24 @@ class AmazonCategoryLoader(AmazonFileMaker):
         curr_product['item_width'] = product.get('width')
         curr_product['item_height'] = product.get('height')
         curr_product['item_length'] = product.get('length')
-        curr_product['item_length_unit_of_measure'] = product.get('IN')
+        curr_product['item_length_unit_of_measure'] = 'IN'
         curr_product['item_weight'] = product.get('weight')
-        curr_product['item_weight_unit_of_measure'] = product.get('LB')
+        curr_product['item_weight_unit_of_measure'] = 'LB'
+        self.check_dimensions(curr_product)
 
+    def check_dimensions(self, product):
+        if not product['item_weight']:
+            product['item_weight_unit_of_measure'] = ""
+        hwl = [
+            product['item_height'],
+            product['item_width'],
+            product['item_length']
+        ]
 
+        if not all(hwl):
+            product['item_height'] = ''
+            product['item_width'] = ''
+            product['item_length'] = ''
 
 
 if "__main__" == __name__:
@@ -798,7 +967,7 @@ if "__main__" == __name__:
         files = [
             "../cc/{}_cc.json".format(manufacturer),
             "../scp/2016/{}_scp.json".format(manufacturer),
-            "../optimus/{}_optimus.json".format(manufacturer)
+            "../optimus/{}_optimus.json".format(manufacturer),
         ]
         outfile = "../aps/{}_aps".format(manufacturer)
         fm = ApsFileMaker(files, outfile, APS_TEMPLATE, ext=ext)

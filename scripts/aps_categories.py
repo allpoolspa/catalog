@@ -138,12 +138,12 @@ COLLECTIONS = [
 POOL_TYPES = ['pool', 'spa', 'commercial', 'residential']
 COMMON = [
     'part', 'accessory', 'miscellaneous', 'maintenance',
-    'accessories', 'unit', 'wholegood', 'equipment'
+    'accessories','unit', 'wholegood', 'equipment'
 ]
 TYPES_N_TAGS = {
     'Filters' : [
         'sand',
-        'DE',
+        'de',
         'cartridge',
         'valve',
         'separation tank',
@@ -158,12 +158,14 @@ TYPES_N_TAGS = {
         'single speed',
         'motor',
         'pump seal',
+        'capacitor',
         POOL_TYPES,
         COMMON,
     ],
     'Motors' : [
         'pump seal',
         'bearing',
+        'capacitor',
         POOL_TYPES,
         COMMON,
     ],
@@ -217,7 +219,7 @@ TYPES_N_TAGS = {
     ],
     'Lighting' : [
         'fiber optic',
-        'LED',
+        'led',
         'floating',
         'fountain',
         'halogen',
@@ -348,7 +350,7 @@ TYPES_N_TAGS = {
         COMMON,
     ],
     'O-Rings & Gaskets' : [
-        'o-ring',
+        'oring',
         'gasket',
         POOL_TYPES,
         COMMON,

@@ -36,7 +36,7 @@ def make_price(cost, multiplier=None):
     except:
         pass
     try:
-        fprice = (cost + (cost * multiplier) + 1.00)
+        fprice = (cost + (cost * multiplier) + 2.00)
         price = round(fprice, 2)
         return price
     except:

@@ -128,5 +128,22 @@ APS_TEMPLATE = {
     "scp_sku":"",
     "optimus_cost":"",
     "optimus_sku":"",
-    "optimus_category":""
+    "optimus_category":"",
+    "fulfillment":"",
+    "asin":"",
+    "manufacturer_category":"",
+    "original_manufacturer":"",
+}
+
+VALPAK_TEMPLATE = {
+    "sku":"",
+    "category":"",
+    "og_manufacturer":"",
+    "title":"",
+    "country":"",
+    "upc":"",
+    "oem":"",
+    "part_number":"",
+    "image_urls":"",
+    "part_number":"",
 }

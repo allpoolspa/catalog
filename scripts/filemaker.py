@@ -9,6 +9,8 @@ from aps_categories import (_CLEANCATS, TYPES_N_TAGS as TNT)
 from scripts import *
 from templates import *
 from fba_inventory import FBA, ERRORS
+from types_n_tags import TypeNTags
+from fba_calculator import calculate_fees
 
 class FileMaker(object):
 
@@ -32,13 +34,13 @@ class FileMaker(object):
             with open(infile, 'Ur') as f:
                 lines = csv.DictReader(f)
                 for line in lines:
+
                     yield line
         except:
-            return
+            print(infile)
 
     def json(self, infile):
         try:
-            print infile
             with open(infile, 'Ur') as f:
                 lines = json.load(f, encoding="ascii")
                 for line in lines:
@@ -47,7 +49,8 @@ class FileMaker(object):
                     except:
                         yield line
         except:
-            return
+            print(infile)
+
 
     def export(self):
         if self.outfile_ext == "csv":
@@ -193,11 +196,18 @@ class ApsFileMaker(FileMaker):
         if not curr_product.get('oem') and product.get('oem'):
             curr_product['oem'] = product.get('oem')
         if not curr_product.get('list_price') and product.get('list_price'):
-            curr_product['list_price'] = product.get('list_price')
+            curr_product['list_price'] = self.cost(product.get('list_price'))
         if not curr_product.get('cost'):
-            curr_product['cost'] = product.get('price', product.get('cost'))
+            curr_product['cost'] = self.cost(
+                product.get('price', product.get('cost'))
+            )
         if not curr_product.get('upc'):
             curr_product['upc'] = product.get('upc')
+        if product.get('dimensions'):
+            l,w,h = self.get_dimensions(product.get('dimensions'))
+            curr_product['length'] = l
+            curr_product['width'] = w
+            curr_product['height'] = h
 
     def scp_import(self, product):
         """Import products from scp."""
@@ -205,19 +215,32 @@ class ApsFileMaker(FileMaker):
         curr_product = self.current_product(product)
 
         self.common_keys(curr_product, product)
+        price = self.cost(product.get('price'))
         curr_product['upc'] = product.get('upc')
         curr_product['available'] = product.get('availability')
         curr_product['obsolete'] = product.get('obsolete')
-        curr_product['type'] = product.get('product_line')
         curr_product['weight'] = product.get('weight')
         curr_product['uom'] = product.get('uom')
-        l,w,h = self.scp_dimensions(product.get('dimensions'))
-        curr_product['length'] = l
-        curr_product['width'] = w
-        curr_product['height'] = h
-        curr_product['scp_cost'] = product.get('price')
-        curr_product['scp_sku'] = product.get('product_number')
-        curr_product['scp_category'] = product.get('department')
+        acost = deepcopy(COSTS)
+        acost['name'] = "scp"
+        acost['cost'] = price
+        curr_product['costs'].append(acost)
+        asku = deepcopy(SKUS)
+        asku['name'] = "scp"
+        asku['sku'] = product.get('product_number')
+        curr_product['skus'].append(asku)
+        acat = deepcopy(CATEGORIES)
+        acat['name'] = "scp"
+        acat['category'] = product.get('department')
+        curr_product['categories'].append(acat)
+        acat = deepcopy(CATEGORIES)
+        acat['name'] = "scp"
+        acat['category'] = product.get('product_line')
+        curr_product['categories'].append(acat)
+        acat = deepcopy(CATEGORIES)
+        acat['name'] = "scp"
+        acat['category'] = product.get('category')
+        curr_product['categories'].append(acat)
 
     def cc_import(self, product):
         """Import products from carecraft."""
@@ -225,39 +248,107 @@ class ApsFileMaker(FileMaker):
         curr_product = self.current_product(product)
 
         self.common_keys(curr_product, product)
-        curr_product['cost'] = product.get('price')
-        curr_product['carecraft_cost'] = product.get('price')
+        price = self.cost(product.get('price'))
+        acost = deepcopy(COSTS)
+        acost['name'] = "carecraft"
+        acost['cost'] = price
+        curr_product['costs'].append(acost)
+        asku = deepcopy(SKUS)
+        asku['name'] = "carecraft"
+        asku['sku'] = product.get('part_number')
+        curr_product['skus'].append(asku)
+        curr_product['cost'] = price
+        acat = deepcopy(CATEGORIES)
+        acat['name'] = "carecraft"
+        acat['category'] = product.get('category')
+        curr_product['categories'].append(acat)
 
     def optimus_import(self, wholegood):
         """Import products from optimus."""
         for product in wholegood['parts']:
+            original_sku = product.get('sku')
             if not self.sku(product): continue;
             curr_product = self.current_product(product)
+
             self.common_keys(curr_product, product)
             curr_product['parent'] = product.get('fits_model')
             curr_product['parent_id'] = wholegood.get('modelid')
+            if not curr_product['image_url']:
+                try:
+                    curr_product['image_url'] = self.image_url(
+                        product['abbreviation'].split('_')[0],
+                        original_sku,
+                        manufacturer=product.get('manufacturer')
+                    )
+                except:
+                    curr_product['image_url'] = product.get('image_urls')
+            price = self.cost(product.get('price'))
+            if price:
+                acost = deepcopy(COSTS)
+                acost['name'] = "optimus"
+                acost['cost'] = price
+                curr_product['costs'].append(acost)
+            asku = deepcopy(SKUS)
+            asku['name'] = "optimus"
+            asku['sku'] = product.get('optimus_sku')
+            curr_product['skus'].append(asku)
+            acat = deepcopy(CATEGORIES)
+            acat['name'] = "optimus"
+            acat['category'] = wholegood.get('category')
+            curr_product['categories'].append(acat)
+            acat = deepcopy(CATEGORIES)
+            acat['name'] = "optimus"
+            acat['category'] = "Part"
+            curr_product['categories'].append(acat)
             try:
-                curr_product['image_url'] = product.get('image_urls')[0]
+                images = deepcopy(IMAGES)
+                images['description'] = "main"
+                images['source'] = "optimus"
+                images['url'] = self.image_url(
+                    curr_product['sku'].split('_')[0],
+                    curr_product['sku'],
+                    manufacturer=product.get('manufacturer')
+                )
+                curr_product['images'].append(images)
             except:
-                curr_product['image_url'] = product.get('image_urls')
-            curr_product['type'] = "Part"
-            curr_product['optimus_cost'] = product.get('price')
-            curr_product['optimus_sku'] = product.get('optimus_sku')
-            curr_product['optimus_category'] = wholegood.get('category')
+                pass
 
     def manufacturer_import(self, product):
         """Import products from val-pakproducts.com"""
-        if not self.sku(product):
-            print product
-            return;
+        if not self.sku(product): return
         curr_product = self.current_product(product)
         self.common_keys(curr_product, product)
-        curr_product['manufacturer_category'] = product.get('category')
+        if product.get('category'):
+            acat = deepcopy(CATEGORIES)
+            acat['name'] = "manufacturer"
+            acat['category'] = product.get('category')
+            curr_product['categories'].append(acat)
+        if product.get('type'):
+            acat = deepcopy(CATEGORIES)
+            acat['name'] = "manufacturer"
+            acat['category'] = product.get('type')
+            curr_product['categories'].append(acat)
         curr_product['original_manufacturer'] = product.get('original_manufacturer')
         curr_product['country'] = product.get('country')
-        curr_product['manufacturer'] = "Val-Pak"
+        curr_product['manufacturer'] = product.get('manufacturer')
+        curr_product['weight'] = product.get('weight')
+        curr_product['length'] = product.get('length')
+        curr_product['height'] = product.get('height')
+        curr_product['width'] = product.get('width')
+        curr_product['uom'] = product.get('uom')
+        curr_product['oem'] = product.get('oem')
+        curr_product['available'] = product.get('available')
+        curr_product['discontinued'] = product.get('discontinued')
         try:
-            curr_product['image_url'] = product.get('image_urls')[0]
+            imgs = product.get('image_urls')
+            if not imgs: raise KeyError
+            curr_product['image_url'] = imgs[0]
+            for counter, img in enumerate(imgs):
+                images = deepcopy(IMAGES)
+                images['description'] = counter
+                images['source'] = "manufacturer"
+                images['url'] = img
+                curr_product['images'].append(images)
         except:
             pass
 
@@ -304,26 +395,17 @@ class ApsFileMaker(FileMaker):
             # remove all unicode objects
             # and convert everything into strings
             product = self.products[key]
+
             #self.string_conversion(product)
             product['fulfillment'] = self.fba(product)
-            product['asin'] = self.asin(product)
-            product['cost'] = self.cost(product.get('cost'))
-            product['list_price'] = self.cost(product.get('list_price'))
-            product['scp_cost'] = self.cost(product.get('scp_cost'))
-            product['optimus_cost'] = self.cost(product.get('optimus_cost'))
-            if product.get('image_url'):
-                sku = product.get('sku')
-                abbr = sku.split('_')[0]
-                product['image_url'] = self.image_url(
-                    abbr,
-                    sku,
-                    manufacturer=product.get('manufacturer')
-                )
-            #print product['image_url']
+            asin = self.asin(product)
+            product['asin'] = asin
+            product['asins'].append(asin)
             self.type_handler(product)
             self.manufacturer(product)
             self.clean_title(product)
             self.product_handle(product)
+            self.filter_foreign_products(product)
             product['obsolete'] = self.obsolete(product)
             product['discontinued'] = self.discontinued(
                 product.get('title', False)
@@ -334,8 +416,46 @@ class ApsFileMaker(FileMaker):
                 or not(product['cost'])
             ):
                 product['available'] = False
+            else:
+                product['quantity'] = 5
+            self.get_type_n_tags(product)
+            self.fba_fees(product)
 
     # Helper functions
+
+    def fba_fees(self, product):
+        try:
+            length = float(product.get('length'))
+            height = float(product.get('height'))
+            width = float(product.get('width'))
+            weight = float(product.get('weight'))
+        except:
+            return
+        try:
+            product['fba_fee'] = round(
+                float(
+                    calculate_fees(length, width, height, weight)
+                ),
+                2
+            )
+        except:
+            product['fba_fee'] = None
+        cost = product.get('cost')
+
+
+    def get_type_n_tags(self, product):
+        tnt = TypeNTags()
+        tnt.find(product)
+        product['category'] = tnt.thetype
+        product['tags'] = tnt.tags
+
+
+
+    def filter_foreign_products(self, product):
+        if '-EU' in product['sku'] or  '-AU' in product['sku']:
+            product['quantity'] = 0
+            product['available'] = False
+
     def asin(self, product):
         sku = product.get('sku')
         part_number = product.get('part_number')
@@ -428,10 +548,10 @@ class ApsFileMaker(FileMaker):
         part_number = product.get('part_number', '')
         scp_sku = product.get('scp_sku','')
         title = product.get('title', '')
-        if part_number not in title:
-            title +='- {}'.format(part_number)
+        title = title.replace(part_number, '')
+        title = title.replace('  ', ' ')
+        title = "{0} - {1}".format(part_number.upper(), title)
         if scp_sku in title:
-            title = title.replace('  ', ' ')
             chars_to_remove = ['(',')']
             try:
                 title = title.translate(
@@ -446,9 +566,9 @@ class ApsFileMaker(FileMaker):
         If product['sku'] doesn't exist, try and make it.
         :return bool: True if sku exists or we can make one, else False.
         """
+
         sku = product.get('sku')
-        if product.get('sku'):
-            product['sku'] = sku
+        if sku:
             return True
         try:
             manufacturer = get_manufacturer(
@@ -457,12 +577,10 @@ class ApsFileMaker(FileMaker):
                     product.get('vendor')
                 )
             )
+
             part_number = product.get(
                 'part_number',
-                product.get(
-                    'oem',
-                    product.get('upc')
-                )
+                product.get('oem', product.get('upc'))
             )
             product['sku'] = make_sku(manufacturer,part_number)
             return True
@@ -470,9 +588,10 @@ class ApsFileMaker(FileMaker):
             print("Failed to get sku".format(product))
         return False
 
-    def scp_dimensions(self, dimensions):
+    def get_dimensions(self, dimensions):
         try:
-            return dimensions.split('x')
+            ldimensions = dimensions.lower()
+            return ldimensions.split('x')
         except:
             return [None, None, None]
 
@@ -518,6 +637,8 @@ class ApsFileMaker(FileMaker):
 
     def type_handler(self, product):
         checklist = []
+        for category in product['categories']:
+            checklist.append(category['category'])
         checklist.append(product.get('type'))
         checklist.append(product.get('category'))
         checklist.append(product.get('subcategory'))
@@ -562,14 +683,13 @@ class ShopifyFileMaker(FileMaker):
             'product_handle', shopify_handle(manufacturer, oem)
         )
         category = product.get('category')
-        category, tags = self._type_n_tags(product)
+        tags = product.get('tags')
         cost = product.get('cost')
         curr_product['Vendor'] = manufacturer
         curr_product['Title'] = title
         curr_product['Published'] = True
         curr_product['Handle'] = handle
         curr_product['Type'] = category
-        curr_product['Tags'] = tags
         #curr_product['Option2 Name'] = "Fits Model"
         #curr_product['Option2 Value'] = datum['title']
         # SEO definitions
@@ -584,10 +704,10 @@ class ShopifyFileMaker(FileMaker):
         if img:
             curr_product['Image Src'] = img
             curr_product['Image Alt Text'] = part_number
-            tags += ',has-image'
+            tags.append('has-image')
 
         else:
-            tags += ',no-image'
+            tags.append('no-image')
 
         if cost:
             curr_product['Variant Inventory Qty'] = 5
@@ -600,165 +720,10 @@ class ShopifyFileMaker(FileMaker):
         curr_product['Variant Fulfillment Service'] = "manual"
         curr_product['Variant Inventory Tracker'] = "shopify"
         curr_product['Variant Requires Shipping'] = True
-        if category == 'Pumps' or category == 'Motors':
-            tags += self._pumps(product)
-        curr_product['Tags'] = self._clean_tags(tags)
+        curr_product['Tags'] = ','.join(tags)
 
-    def _pumps(self, product):
-        title = product['title']
-        sku = product['sku']
-        pump_seals = [
-            'seal' in title.lower(),
-            'ps' in sku.lower(),
-        ]
-        capacitors = [
-            'mfd' in title.lower(),
-            'bc' in sku.lower(),
-        ]
-        manufacturer = ('US SEAL' == product['manufacturer'])
-        if any(pump_seals) and manufacturer:
-            return ',pump seal'
-        elif any(capacitors) and manufacturer:
-            return ',capacitor'
-        return ""
 
-    def _get_keys(self,k):
-        if k.endswith('s'):
-            return k[:-1]
-        return k
 
-    def _type_n_tags(self, product):
-        category = product.get('category')
-        subcategory = product.get('subcategory')
-        op_category = product.get('op_category')
-        scp_category = product.get('scp_category')
-        title = product.get('title')
-        atype = product.get('type')
-        product_type = product.get('product_type')
-        pool_type = product.get('pool_type')
-        pool_or_spa = product.get('pool_or_spa')
-        manufacturer = product.get('manufacturer')
-        items = [category, subcategory, op_category, scp_category, atype]
-        try:
-            for item in items:
-                keys = {k:self._get_keys(k) for k in TNT.keys()}
-                thetype = False
-                for k in keys.keys():
-                    if k in item or item in k or item in keys[k]:
-                        thetype = keys[k]
-                        break
-                if thetype:
-                    break
-                try:
-                    item = item.encode('ascii')
-                except:
-                    continue
-                titem = item.title()
-                pattern = re.compile('[\W_]+')
-                citem = pattern.sub('', item).lower()
-                possible_categories = ""
-                if TNT.get(titem):
-                    possible_categories = titem
-                    break
-                elif _CLEANCATS.get(citem):
-                    possible_categories = _CLEANCATS.get(citem)
-                    break
-            if thetype:
-                cats = [thetype]
-            else:
-                cats = possible_categories.split(',')
-            for cat in cats:
-                cat = str(cat.encode('ascii'))
-                cat = cat.lstrip()
-                print cat
-                try:
-                    tags = TNT.get(cat)
-                    tags = self._gettags(category, possible_categories, tags, title)
-                    tags += ",{0},{1},{2}".format(
-                        pool_type,
-                        product_type,
-                        pool_or_spa
-                    )
-                    return cat, tags
-                except:
-                    pass
-                    # need a log here
-        except:
-            print("No type or tags for: {0}, {1}, {2}, {3}, {4}".format(
-                    category,
-                    op_category,
-                    scp_category,
-                    subcategory,
-                    atype
-                )
-            )
-        if manufacturer == 'US SEAL':
-            return "Pumps", ",part"
-        elif manufacturer == "Unicel":
-            return "Filters", ",part"
-        elif manufacturer == "Raypak":
-            return "Heaters", ""
-        elif manufacturer == "Odyssey":
-            return "Covers", ",accessory"
-        else:
-            return "Accessories", "no-cat,"
-
-    def _gettags(self, key, categories, tags, title=""):
-        product_tags = ""
-        try:
-            lkey = key.lower()
-        except:
-            lkey = ""
-        try:
-            lcategories = categories.lower()
-        except:
-            lcategories = ""
-        try:
-            ltitle = title.lower()
-        except:
-            ltitle = ""
-
-        for tag in tags:
-            if isinstance(tag, str):
-                ltag = tag.lower()
-                if ltag in lkey:
-                    product_tags += "," + ltag
-                if ltag in lcategories:
-                    product_tags += "," + ltag
-                if ltag in ltitle:
-                    product_tags += "," + ltag
-            else:
-                for atag in tag:
-                    ltag = atag.lower()
-                    if ltag in lkey:
-                        product_tags += "," + ltag
-                    if ltag in lcategories:
-                        product_tags += "," + ltag
-                    if ltag in ltitle:
-                        product_tags += "," + ltag
-
-        return product_tags if product_tags else key
-
-    def _clean_tags(self, tags):
-        equipment = [
-            'equipment' in tags,
-            'wholegood' in tags,
-            'unit' in tags
-        ]
-        if 'part' in tags and any(equipment):
-            tags = tags.replace('part', '')
-            tags = tags.replace('unit', '')
-            tags = tags.replace('equipment', '')
-            tags += ",wholegood"
-        taglist = tags.split(',')
-        cleanlist = []
-        for tag in taglist:
-            strtag = str(tag).lower()
-
-            if strtag and not(strtag in cleanlist):
-                cleanlist.append(strtag)
-        cleanstr = ','.join(cleanlist)
-        return cleanstr
 
 class AmazonFileMaker(FileMaker):
 
@@ -870,7 +835,7 @@ class AmazonInventoryLoader(AmazonFileMaker):
         price = make_price(cost, .4)
         asin = product.get('asin')
         minprice = make_price(cost, multiplier=.25)
-        maxprice = make_price(price, multiplier=10)
+        maxprice = make_price(price, multiplier=20)
         curr_product['sku'] = sku
         curr_product['product-id-type'] = self.id_type
         curr_product['product-id'] = upc
@@ -883,13 +848,11 @@ class AmazonInventoryLoader(AmazonFileMaker):
         curr_product['fulfillment-center-id'] = fulfillment
         curr_product['leadtime-to-ship'] = self.leadtime
         if fulfillment == "AMAZON_NA":
-            print sku, price
             price = self.fba_price_adjustment(price)
             curr_product['product-id-type'] = 1
             curr_product['product-id'] = asin
             curr_product['quantity'] = ""
             curr_product['leadtime-to-ship'] = ""
-            print sku, price
         curr_product['price'] = price
 
 
@@ -965,9 +928,11 @@ if "__main__" == __name__:
         ext = "json"
     if action == "aps":
         files = [
-            "../cc/{}_cc.json".format(manufacturer),
+            "../cc/2016/{}_cc.json".format(manufacturer),
             "../scp/2016/{}_scp.json".format(manufacturer),
-            "../optimus/{}_optimus.json".format(manufacturer),
+            "../optimus/2016/{}_optimus.json".format(manufacturer),
+            "../manufacturer/{}_man_2.csv".format(manufacturer),
+            "../manufacturer/{}_man.json".format(manufacturer)
         ]
         outfile = "../aps/{}_aps".format(manufacturer)
         fm = ApsFileMaker(files, outfile, APS_TEMPLATE, ext=ext)

@@ -101,6 +101,40 @@ MANUFACTURERS = [
     'Zodiac',
     'Pentair',
     'Hayward',
+    'A.O. Smith',
+    'Afras',
+    'Jandy',
+    'Odyssey',
+    'Polaris',
+    'Raypak',
+    'S.R. Smith',
+    'Unicel',
+    'US SEAL',
+    'American Products',
+    'Pac-Fab',
+    'PacFab',
+    'Pac Fab',
+    'Harmsco',
+    'Martin',
+    'Anthony',
+    'Paragon',
+    'Purex',
+    'Swimquip',
+    'Sta-Rite',
+    'Marlin',
+    'Marquis',
+    'Fountain Valley Spa',
+    'Baker',
+    'Waterco',
+    'Atlantic',
+    'Jacuzzi',
+    'Aquatemp',
+    'Muskin',
+    'Rainbow',
+    'Sundance',
+    'American',
+    'Premier',
+
 ]
 
 # All the collections for the shopify allpoolspa.com
@@ -138,7 +172,9 @@ COLLECTIONS = [
 POOL_TYPES = ['pool', 'spa', 'commercial', 'residential']
 COMMON = [
     'part', 'accessory', 'miscellaneous', 'maintenance',
-    'accessories','unit', 'wholegood', 'equipment'
+    'accessories','unit', 'wholegood', 'equipment', 'o-ring',
+    'gasket', 'lid', 'cover', 'kit',
+
 ]
 TYPES_N_TAGS = {
     'Filters' : [
@@ -147,48 +183,67 @@ TYPES_N_TAGS = {
         'cartridge',
         'valve',
         'separation tank',
-        'filter system',
         'replacement',
+        'system',
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'Pumps' : [
-        'variable speed',
+        'variable',
         'multiple speed',
+        'two speed',
         'single speed',
         'motor',
         'pump seal',
         'capacitor',
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'Motors' : [
         'pump seal',
         'bearing',
         'capacitor',
+        'variable',
+        'multiple speed',
+        'two speed',
+        'single speed',
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'Heaters' : [
         'gas',
         'propane',
         'electric',
+        'heat exchanger',
+        'header',
+        'union',
+        'control',
+        'panel',
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'Heat Pumps' : [
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'Air Blowers' : [
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'White Goods' : [
+        'pressure',
+        'gauge',
         'skimmer',
         'cover',
         'weir',
         'drain',
+        'main drain',
         'grate',
         'basket',
         'pvc',
@@ -208,6 +263,7 @@ TYPES_N_TAGS = {
         'electric',
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'Skimmers' : [
         'skimmer',
@@ -216,6 +272,7 @@ TYPES_N_TAGS = {
         'basket',
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'Lighting' : [
         'fiber optic',
@@ -232,12 +289,14 @@ TYPES_N_TAGS = {
         'bulb',
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'Automation' : [
         'control',
         'controller',
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'O-Rings & Gaskets' : [
         'pump',
@@ -249,8 +308,13 @@ TYPES_N_TAGS = {
         'lubricant',
         'accessory',
         'miscellaneous',
+        'heat pump',
+        'cleaner',
+        'automation',
+        'sanitization',
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'Sanitization' : [
         'salt system',
@@ -261,6 +325,7 @@ TYPES_N_TAGS = {
         'feeder',
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'Maintenance' : [
         'test kit',
@@ -275,29 +340,16 @@ TYPES_N_TAGS = {
         'testing',
         'vacuum head',
         'hose',
+        'saddle clamp',
+        'test plug',
         POOL_TYPES,
         COMMON,
-    ],
-    'Chemicals' : [
-        'sanitizer',
-        'algaecide',
-        'phosphate Remover',
-        'tab',
-        'shock',
-        'maintenance',
-        'ph',
-        'alkalinity',
-        'metal',
-        'conditioner',
-        'fragrance',
-        POOL_TYPES,
-        COMMON,
+        MANUFACTURERS
     ],
     'Deck Accessories' : [
         'rail',
         'water feature',
         'slide',
-        'pool access',
         'ladder',
         'diving',
         'lifeguard',
@@ -317,6 +369,7 @@ TYPES_N_TAGS = {
         'spray paint',
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'Covers' : [
         'winter',
@@ -324,6 +377,7 @@ TYPES_N_TAGS = {
         'heater',
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'Accessories': [
         'float',
@@ -339,6 +393,7 @@ TYPES_N_TAGS = {
         'spray paint',
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'Cleaners': [
         'suction',
@@ -348,12 +403,14 @@ TYPES_N_TAGS = {
         'pump',
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'O-Rings & Gaskets' : [
         'oring',
         'gasket',
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
     ],
     'Valves' : [
         'valve',
@@ -366,6 +423,12 @@ TYPES_N_TAGS = {
         'filter control valve',
         POOL_TYPES,
         COMMON,
+        MANUFACTURERS
+    ],
+    'Miscellaneous' : [
+        POOL_TYPES,
+        COMMON,
+        MANUFACTURERS
     ]
 }
 
@@ -555,7 +618,7 @@ MENUS = {
 ########################END SHOPIFY#####################################
 
 
-# Manufacturers and distributor categories
+# Manufacturers and distributor categories. Use _CLEANCATS
 _CATEGORIES = {
     # Optimus
     "Cleaners, Robotic" : "Cleaners, Robotic",

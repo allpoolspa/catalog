@@ -45,57 +45,9 @@ SHOPIFY_TEMPLATE = {
     "Variant Weight Unit": "",
 }
 
-REACTION_TEMPLATE = {
-    "_id": "",
-    "vendor": "",
-    "title": "",
-    "pageTitle": "",
-    "description": "",
-    "metaDescription": "",
-    "isVisible": True,
-    "requiresShipping": True,
-    "hashtags": [],
-    "metafields": [{
-            "key": "Original Manufacturer",
-            "value": None
-        },{
-            "key": "Made In",
-            "value": "USA"
-        }
-    ],
-    "variants": [{
-        "_id": "",
-        "price": "",
-        "barcode": "",
-        "title": "",
-        "sku": "",
-        "taxable": True,
-        "inventoryQuantity": 10,
-        "fulfillmentService": "All Pool Spa",
-        "inventoryManagement": True,
-        "inventoryPolicy": True,
-        "lowInventoryWarningThreshold": 1,
-        "weight": 35,
-        "optionTitle": "",
-        "metafields": [{
-                "key": "Original Manufacturer",
-                "value": None
-            },{
-                "key": "OEM",
-                "value": None
-            },{
-                "key": "Made In",
-                "value": "USA"
-            },{
-                "key": "Condition",
-                "value": "New"
-            }
-        ],
-    }]
-}
-
 APS_TEMPLATE = {
     "sku":"",
+    "skus": [],
     "part_number":"",
     "oem":"",
     "title":"",
@@ -109,30 +61,62 @@ APS_TEMPLATE = {
     "product_handle": "",
     "manufacturer":"",
     "cost":"",
+    "costs": [],
     "list_price":"",
     "available":"",
     "obsolete":"",
     "discontinued": "",
     "weight":"",
+    "weight_uom":"",
     "height":"",
+    "height_uom":"",
     "length":"",
+    "length_uom":"",
     "width":"",
+    "width_uom":"",
     "uom":"",
     "upc": "",
     "parent":"",
     "parent_id": "",
+    "parent_sku":"",
     "image_url":"",
-    "carecraft_cost":"",
-    "scp_cost":"",
-    "scp_category":"",
-    "scp_sku":"",
-    "optimus_cost":"",
-    "optimus_sku":"",
-    "optimus_category":"",
+    "images":[],
     "fulfillment":"",
-    "asin":"",
-    "manufacturer_category":"",
+    "asins":[],
     "original_manufacturer":"",
+    "instructuctions":"",
+    "warranty":"",
+    "categories":[],
+    "tags":set(),
+    "quantity":0,
+    "fba_fee":0,
+}
+
+CATEGORIES = {
+    "name":"",
+    "category":""
+}
+ASINS = {
+    "asin":"",
+    "sales_rank":"",
+    "url":"",
+    "fulfillment":""
+}
+
+COSTS = {
+    "name":"",
+    "cost":""
+}
+
+SKUS = {
+    "name":"",
+    "sku":""
+}
+
+IMAGES = {
+    "source":"",
+    "description":"",
+    "url":""
 }
 
 VALPAK_TEMPLATE = {

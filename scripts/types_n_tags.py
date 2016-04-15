@@ -296,9 +296,6 @@ class TypeNTags(object):
                     return k
         return None
 
-
-
-
     def _clean_tags(self):
         self.tags.discard(None)
         self.tags.discard("")

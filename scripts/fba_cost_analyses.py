@@ -3,9 +3,56 @@ import csv
 from os import listdir
 from os.path import isfile, join
 
+class Report(object):
 
 
-class FbaCostAnalysisReport(object):
+    def __init__(self, outfile):
+        self.aps_files = self.get_aps_files()
+        self.outfile = outfile
+
+
+    def get_aps_files(self):
+        return [f for f in listdir('../aps') if isfile(join('../aps', f))]
+
+    def _import_aps_file(self, infile):
+        with open('../aps/{}'.format(infile), 'Ur') as f:
+            print "checking {}".format(infile)
+            lines = json.load(f, encoding="ascii")
+            for line in lines:
+                try:
+                    yield lines[line]
+                except:
+                    yield line
+
+    def _export(self):
+        with open("{0}".format(self.outfile), 'w') as openfile:
+            writer = csv.DictWriter(
+                openfile,
+                fieldnames=self.FIELDNAMES
+            )
+            writer.writeheader()
+            for product in self.fba_products.values():
+                writer.writerow(
+                    {
+                        k:unicode(v).encode("utf-8")
+                        for k,v in product.items()
+                    }
+                )
+
+    def run(self):
+        self.start()
+        self.finish()
+
+    @property
+    def outfile(self):
+        return self._outfile
+
+    @outfile.setter
+    def outfile(self, value):
+        self._outfile = value
+
+
+class FbaCostAnalysisReport(Report):
 
     FIELDNAMES = [
         'seller-sku',
@@ -55,33 +102,20 @@ class FbaCostAnalysisReport(object):
         "V38130":59.39,
     }
 
-    def __init__(self, fba_file):
+    def __init__(self, fba_file, outfile):
+        super(FbaCostAnalysisReport, self).__init__(outfile)
         self.fba_file = fba_file
-        self.aps_files = self.get_aps_files()
         self.fba_products = {}
 
-    def get_aps_files(self):
-        return [f for f in listdir('../aps') if isfile(join('../aps', f))]
-
-    def import_fba_inventory_file(self):
+    def _import_fba_inventory_file(self):
         print self.fba_file
         with open(self.fba_file, 'Ur') as f:
             lines = csv.DictReader(f)
             for line in lines:
                 yield line
 
-    def import_aps_file(self, infile):
-        with open('../aps/{}'.format(infile), 'Ur') as f:
-            print "checking {}".format(infile)
-            lines = json.load(f, encoding="ascii")
-            for line in lines:
-                try:
-                    yield lines[line]
-                except:
-                    yield line
-
-    def run(self):
-        fbas = self.import_fba_inventory_file()
+    def start(self):
+        fbas = self._import_fba_inventory_file()
         for fba in fbas:
             cost = self.MISSING_SKUS.get(fba['sku'])
             if cost:
@@ -90,7 +124,7 @@ class FbaCostAnalysisReport(object):
                 fba['total_cost'] = cost * float(quantity)
             self.fba_products[fba['sku']] = fba
         for infile in self.aps_files:
-            for aps_product in self.import_aps_file(infile):
+            for aps_product in self._import_aps_file(infile):
                 sku = aps_product.get('sku')
                 part_number = aps_product.get('part_number')
                 oem = aps_product.get('oem')
@@ -108,9 +142,8 @@ class FbaCostAnalysisReport(object):
                 if fba2 and not fba2.get('cost'):
                     self.add_cost_analysis(manufacturer, fba2, cost)
 
-        self.export()
-
-
+    def finish(self):
+        self._export()
 
 
     def add_cost_analysis(self, manufacturer, product, cost):
@@ -128,25 +161,90 @@ class FbaCostAnalysisReport(object):
             pass
 
 
-    def export(self):
-        outfile = "../../Reports/AmazonReports/FBAReports/FBACostAnalysis/cost_analysis.csv"
-        with open("{0}".format(outfile), 'w') as openfile:
-            writer = csv.DictWriter(
-                openfile,
-                fieldnames=self.FIELDNAMES
-            )
-            writer.writeheader()
-            for product in self.fba_products.values():
-                writer.writerow(
-                    {
-                        k:unicode(v).encode("utf-8")
-                        for k,v in product.items()
-                    }
-                )
+class AmazonProfitReport(Report):
+
+
+    def __init__(self, sales_report_file, outfile):
+        super(AmazonProfitReport).__init__(outfile):
+        self.sales_report_file = sales_report_file
+        self.sales = {}
+
+
+    def start(self):
+        pass
+
+    def _import_sales_report_file(self):
+        print self.fba_file
+        with open(self.fba_file, 'Ur') as f:
+            lines = csv.DictReader(f)
+            for line in lines:
+                yield line
+
+    def gather_sales(self):
+        for sale in self._import_sales_report_file():
+            sku = sale['sku']
+            if not self.sales.get(sku):
+                self.sales[sku] = SALES_TEMPLATE
+            order = self.sales[sku]
+            order['orders'].append(deepcopy(ORDER_TEMPLATE))
+            order['orders']['date'] = sale['date/time']
+            order['orders']['type'] = sale['type']
+            order['orders']['order-id'].add(sale['order-id'])
+            order['orders']['quantity'] = sale['quantity']
+            order['orders']['marketplace'] = sale['marketplace']
+            order['orders']['fulfillment'] = sale['fulfillment']
+            order['orders']['order city'] = sale['order city']
+            order['orders']['order state'] = sale['order state']
+            order['orders']['order postal'] = sale['order postal']
+            order['orders']['product sales'] = sale['product sales']
+            order['orders']['shipping credits'] = sale['shipping credits']
+            order['orders']['gift wrap credits'] = sale['gift wrap credits']
+            order['orders']['promotional rebates'] = sale['promotional rebates']
+            order['orders']['sales tax collected'] = sale['sales tax collected']
+            order['orders']['selling fees'] = sale['selling fees']
+            order['orders']['fba fees'] = sale['fba fees']
+            order['orders']['other transaction fees'] = sale['other transaction fees']
+            order['orders']['other'] = sale['other']
+            order['total'] += sale['total']
+
+
+
+
+
+SALES_TEMPLATE = {
+    'sku':'',
+    'orders': [], # a list of dicts that keep order information
+    'total': 0
+
+}
+
+ORDER_TEMPLATE = {
+    'date':'',
+    'type':'',
+    'order-id':'',
+    'quantity':'',
+    'marketplace':'',
+    'fulfillment':'',
+    'order city':'',
+    'order state':'',
+    'order postal':'',
+    'product sales':'',
+    'shipping credits':'',
+    'gift wrap credits':'',
+    'promotional rebates':'',
+    'sales tax collected':'',
+    'selling fees':'',
+    'fba fees':'',
+    'other transaction fees':'',
+    'other':'',
+    'total':''
+}
 
 
 if __name__ == "__main__":
+    outfile = "../../Reports/AmazonReports/FBAReports/FBACostAnalysis/cost_analysis2.csv"
     fba_file = "../../Reports/AmazonReports/FBAInventory/fba_inventory_04072016.csv"
-    fba_ca = FbaCostAnalysisReport(fba_file)
+    fba_ca = FbaCostAnalysisReport(fba_file, outfile)
     fba_ca.run()
+
 

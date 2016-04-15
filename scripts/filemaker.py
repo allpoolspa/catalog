@@ -551,6 +551,7 @@ class ApsFileMaker(FileMaker):
         title = title.replace(part_number, '')
         title = title.replace('  ', ' ')
         title = "{0} - {1}".format(part_number.upper(), title)
+        title = title.replace("*Part* ", '')
         if scp_sku in title:
             chars_to_remove = ['(',')']
             try:
@@ -568,8 +569,11 @@ class ApsFileMaker(FileMaker):
         """
 
         sku = product.get('sku')
+        """
         if sku:
+            product['sku'] = sku
             return True
+        """
         try:
             manufacturer = get_manufacturer(
                 product.get(
@@ -580,7 +584,11 @@ class ApsFileMaker(FileMaker):
 
             part_number = product.get(
                 'part_number',
-                product.get('oem', product.get('upc'))
+                product.get('oem',
+                    product.get('sku',
+                        product.get('upc')
+                    )
+                )
             )
             product['sku'] = make_sku(manufacturer,part_number)
             return True
@@ -823,6 +831,7 @@ class AmazonInventoryLoader(AmazonFileMaker):
     def aps_import(self, product):
         upc = product.get('upc')
         if not upc: return
+        print(product)
         sku = product.get('sku')
         curr_product = self.current_product(product)
         oem = product.get('oem')

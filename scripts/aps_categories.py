@@ -429,6 +429,14 @@ TYPES_N_TAGS = {
         POOL_TYPES,
         COMMON,
         MANUFACTURERS
+    ],
+    'Floats & Toys' : [
+        'float',
+        'game',
+        'basketball',
+        'volleyball',
+        'inflatable',
+        'chair',
     ]
 }
 
